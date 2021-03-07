@@ -1,0 +1,83 @@
+footer{
+	position: relative;
+	z-index:8;
+	background-color:#3388B1;
+	.brand{
+		.trangle{
+			width:50px;
+		}
+	}
+	button.btn.btn-primary{
+		border-radius: 50px;
+		background-image: linear-gradient(to left bottom, #5ec5cb, #4cb6c6, #3ea7c1, #3598ba, #3388b1);
+		width: 50%;
+		border: 1px solid transparent;
+		color: #f8f9fa;
+	    opacity: 0.9;
+	    display: flex;
+    	align-items: center;
+    	justify-content: space-around;
+	}
+	h4{
+		font-size: 1.2rem!important;
+	    color: #f8f9fa;
+	    opacity: 0.9;
+	}
+	.job{
+		font-size: 1rem!important;
+		margin:0;
+		color: #f8f9fa;
+	    opacity: 0.9;
+	}
+	.discraption {
+	 	color: #f8f9fa;
+	    opacity: 0.9;
+	    padding: 0;
+	    list-style: none;
+	    margin-top: 0;
+	    li:first-child {
+	    	font-weight: 500;
+		  	font-size: 1.2rem;
+    		margin-bottom: 0.7rem;
+		}
+    }
+    .title{
+    	font-weight: 500;
+		font-size: 1.2rem;
+    	margin-bottom: 0.7rem;
+    	color: #f8f9fa;
+	    opacity: 0.9;
+    }
+    .social{
+    	color: #f8f9fa;
+	    opacity: 0.9;
+	    padding: 0;
+	    list-style: none;
+	    margin-top: 0;
+	    display: inline-flex;
+	    li:first-child {
+	    	font-weight: 500;
+		  	font-size: 1.2rem;
+    		margin-bottom: 0.7rem;
+		}
+		li{
+			border: 1px solid white;
+			margin: 5px;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: 992px) {
+	 footer button.btn.btn-primary {
+	 	margin-left: auto;
+	 	margin-right: auto;
+	}
+}
