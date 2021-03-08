@@ -38,7 +38,8 @@ Route::resource('volunteer', 'VolunteerController');
 //about us
 Route::resource('about-us', 'AboutUsController');
 //ADMIN
-
+// Language
+Route::get('locale/{locale}', 'LanguagesController@index')->name('locale');
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
     //setting

@@ -1,13 +1,13 @@
 <div class="header-slider-one">
     @foreach($sliders as $slider)
-        <div class="header-area header-bg" style="background-image:url({{ resizeImage($slider->image, 50, 20) }});">
+        <div class="header-area header-bg" style="background-image:url({{ resizeImage($slider->image, 1798, 1062) }});">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="header-inner">
                             <!-- header inner -->
                             <div class="icon">
-                                <img src="{{ asset('images/'.resizeImage($slider->image, 50, 20)) }}" alt="">
+                                <img src="{{ asset('images/'.resizeImage($slider->image, 1798, 1062)) }}" alt="">
                             </div>
                             <h1 class="title">
                                 @if(app()->getLocale() == "en") {{ $slider->title_en }} @else {{ $slider->title_ar }} @endif

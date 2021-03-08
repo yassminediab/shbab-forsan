@@ -35,14 +35,14 @@ if (!function_exists('resizeImage')) {
     {
         $pathInfo = pathinfo($filename);
 
-        $newImage = public_path('images/cache'). "/".  $pathInfo['filename']. "_". $width . 'x' . $height . $pathInfo['extension'];
+        $newImage = public_path('images/cache'). "/".  $pathInfo['filename']. "_". $width . 'x' . $height . '.'.$pathInfo['extension'];
 
         if (is_file($newImage)) {
-            return "cache/". $pathInfo['filename']. "_". $width . 'x' . $height . $pathInfo['extension'];
+            return "cache/". $pathInfo['filename']. "_". $width . 'x' . $height . '.'. $pathInfo['extension'];
         }
         $image = Image::make(public_path('images'). "/". $filename);
         $image->resize($width, $height);
         $image->save($newImage);
-        return "cache/". $pathInfo['filename']. "_". $width . 'x' . $height . $pathInfo['extension'];
+        return "cache/". $pathInfo['filename']. "_". $width . 'x' . $height . '.'. $pathInfo['extension'];
     }
 }

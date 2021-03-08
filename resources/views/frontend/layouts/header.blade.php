@@ -134,6 +134,7 @@
                         <li><a href="{{ url('cases') }}">{{ __('Cases') }}</a></li>
                       
                         <li><a href="{{ url('contact') }}">{{ __('Contact') }}</a></li>
+                        <li> <a href="{{ route('locale', $switchLanguage) }}">{{ __('frontend.language_switch') }}</a></li>
                     </ul>
                 </div>
                 <div class="nav-right-content">
