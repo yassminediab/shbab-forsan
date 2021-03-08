@@ -36,7 +36,15 @@ RUN docker-php-ext-install \
     opcache \
     calendar \
     pdo_mysql \
+    gd \
     zip
+
+RUN apt-get update && apt-get install -y \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
 
 # 5. composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url(assets/img/breadcrumb/01.jpg);">
+    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'.resizeImage($pageSetting->image, 1792, 510))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,16 +9,17 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">{{ __('Donation') }}</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
-                            <li><a href="{{ url('/') }}">{{ __('Home') }}</a></li>
-                            <li><a href="#">{{ __('Donation') }}</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Our latest causes -->
     <div class="our-latest-area padding-bottom-130 padding-top-120">
         <div class="container">
@@ -45,13 +46,13 @@
                                     @if(app()->getLocale() == "en") {{ $case->title_en }} @else {{ $case->title_ar }} @endif
                                 </h3>
                                 <p>
-                                   
+
                                     @if(app()->getLocale() == "en")   {{ \Str::limit(Strip_tags($case->content_en), $limit = 50, $end = '...')  }}
                                      @else  {{ \Str::limit(Strip_tags($case->content_ar), $limit = 50, $end = '...')  }}  @endif
                                 </p>
                                 <div class="btn-wrapper">
                                     <a href="{{ url('cases/'. $case->id) }}" class="boxed-btn">
-                                        {{ __('Read More') }} 
+                                        {{ __('Read More') }}
                                     </a>
                                 </div>
                             </div>
@@ -63,7 +64,7 @@
                 {{ $cases->links() }}
             </div>
         </div>
-      
+
     </div>
 
 <script>
@@ -85,9 +86,9 @@
                 percentage: 65,
                 fillBackgroundColor: "#f1ae44"
             });
-        })(jQuery); 
+        })(jQuery);
         @endforeach
      });
  </script>
 
- @endsection   
+ @endsection

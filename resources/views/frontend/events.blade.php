@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url(assets/img/breadcrumb/01.jpg);">
+    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'.resizeImage($pageSetting->image, 1792, 510))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,10 +9,10 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">Events</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li><a href="#">Events Blog </a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,12 +37,12 @@
                         <div class="content-wrapper">
                             <div class="content">
                                 <a class="title" href="{{ url('events/'. $event->id) }}">
-                                    @if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif    
+                                    @if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif
                                 </a>
                                 <ul class="info-items-03">
                                     <li><a href="{{ url('events/'. $event->id) }}"><i class="far fa-clock"></i>{{ $event->time_from }}   -   {{  $event->time_to }}</a></li>
-                                    <li><a href="{{ url('events/'. $event->id) }}"><i class="fas fa-map-marker-alt"></i> 
-                                        @if(app()->getLocale() == "en") {{ $event->location_en }} @else {{ $event->location_ar }} @endif    
+                                    <li><a href="{{ url('events/'. $event->id) }}"><i class="fas fa-map-marker-alt"></i>
+                                        @if(app()->getLocale() == "en") {{ $event->location_en }} @else {{ $event->location_ar }} @endif
                                     </a></li>
                                 </ul>
                                 {{-- <div class="events-btn-wrapper">
@@ -60,4 +60,4 @@
             </div>
         </div>
     </section>
-@endsection  
+@endsection

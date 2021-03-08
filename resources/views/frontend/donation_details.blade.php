@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url(assets/img/breadcrumb/01.jpg);">
+    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'.resizeImage($pageSetting->image, 1792, 510))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,10 +9,10 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">Donation</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
                             <li><a href="{{ url('/') }}">Home</a></li>
-                            <li><a href="#">Donation</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         <p>
                             @if(app()->getLocale() == "en")  {!! $case->content_en !!} @else {!! $case->content_ar !!} @endif
                         </p>
-                       
+
                         <div class="donation-img-thumb padding-top-30 padding-bottom-40">
                             <div class="row">
                                 <div class="col-md-6">
@@ -75,9 +75,9 @@
                                 @foreach($cases as $relatedCase)
                                     <li class="single-recent-post-item">
                                         <div class="thumb">
-                                            <img src="{{ asset('images/'. $relatedCase->image) }}" 
+                                            <img src="{{ asset('images/'. $relatedCase->image) }}"
                                             alt="@if(app()->getLocale() == "en") {{ $relatedCase->title_en }} @else {{ $relatedCase->title_ar }} @endif">
-                                            
+
                                         </div>
                                         <div class="content">
                                             <h4 class="title"><a href="#">
@@ -94,5 +94,4 @@
             </div>
         </div>
     </div>
-@endsection    
-  
+@endsection

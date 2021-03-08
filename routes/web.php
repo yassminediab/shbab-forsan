@@ -73,7 +73,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('blogs/create', 'Admin\BlogController@create');
     Route::post('blogs/store', 'Admin\BlogController@store');
     Route::post('blogs/update', 'Admin\BlogController@update');
-   
+
 
     // events
     Route::get('events', 'Admin\EventController@index')->name('events.index');
@@ -129,7 +129,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('volunteers/store', 'Admin\VolunteerController@store');
     Route::post('volunteers/update', 'Admin\VolunteerController@update');
 
-    
+
     //volunteers
     Route::get('slider', 'Admin\SliderController@index')->name('slider.index');
     Route::get('slider/edit/{id}', 'Admin\SliderController@edit');
@@ -192,6 +192,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('problem/section/create', 'Admin\ProblemSectionController@create');
     Route::post('problem/section/store', 'Admin\ProblemSectionController@store');
     Route::post('problem/section/update', 'Admin\ProblemSectionController@update');
+
+    //volunteer section
+    Route::get('page/settings', 'Admin\PageSettingController@index')->name('pageSettings.index');
+    Route::get('page/settings/edit/{id}', 'Admin\PageSettingController@edit');
+    Route::get('page/settings/show/{id}', 'Admin\PageSettingController@show');
+    Route::get('page/settings/delete/{id}', 'Admin\PageSettingController@delete');
+    Route::get('page/settings/create', 'Admin\PageSettingController@create');
+    Route::post('page/settings/store', 'Admin\PageSettingController@store');
+    Route::post('page/settings/update', 'Admin\PageSettingController@update');
 
     //case section section
     Route::get('case/section', 'Admin\CaseSectionController@index')->name('case.section.index');

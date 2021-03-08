@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'. $VolunteerSection->image) }});">
+    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'.resizeImage($pageSetting->image, 1792, 510))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,10 +9,10 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">{{ __('Become a volunteer') }}</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
-                            <li><a href="index-2.html">{{ __('Home') }}</a></li>
-                            <li><a href="#">{{ __('Become a volunteer') }}</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <div class="volunteer-details-item">
                         <div class="section-title margin-bottom-35">
                             <h2 class="title">
-                                @if(app()->getLocale() == "en") {{ $VolunteerSection->title_en }} @else {{ $VolunteerSection->title_ar }} @endif    
+                                @if(app()->getLocale() == "en") {{ $VolunteerSection->title_en }} @else {{ $VolunteerSection->title_ar }} @endif
                             </h2>
                             <p>
                                 @if(app()->getLocale() == "en")   {!! $VolunteerSection->content_en !!}
@@ -91,4 +91,4 @@
             </div>
         </div>
     </div>
-@endsection   
+@endsection
