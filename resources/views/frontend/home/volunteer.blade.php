@@ -1,6 +1,6 @@
    @if(! empty($volunteerSection))
    <!-- Volunteer Area -->
-   <section class="volunteer-area bg-image padding-bottom-90 padding-top-120" style="background-image: url(assets/img/bg/03.png);">
+   <section class="volunteer-area bg-image padding-bottom-90 padding-top-120">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

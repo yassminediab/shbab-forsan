@@ -1,6 +1,6 @@
  @if(! empty($testimonialSection))
  <!-- testimonial area start  -->
- <section class="testimonial-area bg-image padding-top-105" style="background-image: url(assets/img/bg/03.jpg);">
+ <section class="testimonial-area bg-image padding-top-105">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">

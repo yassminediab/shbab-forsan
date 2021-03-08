@@ -125,8 +125,10 @@
                             <li>
                                 <a href="#"><i class="icon-wrench3"></i> <span>Settings</span></a>
                                 <ul>
-                                    <li><a href="{{ url('admin/footer') }}">view settings</a></li>
-                                    <li><a href="{{ url('admin/social-media') }}">view social media</a></li>
+                                    <li><a href="{{ url('admin/footer') }}">settings</a></li>
+                                    <li><a href="{{ url('admin/social-media') }}">Social Media</a></li>
+                                    <li><a href="{{ url('admin/page/settings') }}">Page Settings</a></li>
+
                                 </ul>
                             </li>
 
@@ -135,7 +137,6 @@
                                 <ul>
                                     <li><a href="{{ url('admin/about-us') }}">view About Us</a></li>
                                     <li><a href="{{ url('admin/volunteer/section') }}">view volunteer</a></li>
-                                    <li><a href="{{ url('admin/page/settings') }}">view settings</a></li>
                                 </ul>
                             </li>
 
@@ -159,23 +160,23 @@
                             <li>
                                 <a href="#"><i class="icon-calendar3"></i> <span>Events</span></a>
                                 <ul>
-                                    <li><a href="{{ url('admin/events') }}">view events</a></li>
+                                    <li><a href="{{ url('admin/events') }}">View Events</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <a href="#"><i class="icon-stack2"></i> <span>Cases</span></a>
                                 <ul>
-                                    <li><a href="{{ url('admin/cases') }}">view cases</a></li>
+                                    <li><a href="{{ url('admin/cases') }}">View Cases</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="#"><i class="icon-stack2"></i> <span>blogs</span></a>
+                                <a href="#"><i class="icon-stack2"></i> <span>Blogs</span></a>
                                 <ul>
-                                    <li><a href="{{ url('admin/blogs') }}">view blogs</a></li>
-                                    <li><a href="{{ url('admin/categories') }}">view categories</a></li>
-                                    <li><a href="{{ url('admin/tags') }}">view tags</a></li>
+                                    <li><a href="{{ url('admin/blogs') }}">View Blogs</a></li>
+                                    <li><a href="{{ url('admin/categories') }}">View Categories</a></li>
+                                    <li><a href="{{ url('admin/tags') }}">View Tags</a></li>
 
                                 </ul>
                             </li>

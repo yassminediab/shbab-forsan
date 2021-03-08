@@ -1,6 +1,6 @@
  <!-- footer area start -->
  <footer class="footer-area">
-    <div class="footer-top bg-black bg-image padding-top-85 padding-bottom-50" style="background-image: url(assets/img/bg/footer-bg.png);">
+    <div class="footer-top bg-black bg-image padding-top-85 padding-bottom-50">
         <div class="container">
             <div class="footer-top-border">
                 <div class="row">

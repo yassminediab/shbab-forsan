@@ -7,9 +7,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-inner">
-                        <div class="icon">
+                        {{-- <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
-                        </div>
+                        </div> --}}
                         <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
                             <li><a href="{{ url('/') }}">Home</a></li>

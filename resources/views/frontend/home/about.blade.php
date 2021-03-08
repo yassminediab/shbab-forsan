@@ -1,5 +1,5 @@
 @if(! empty($about))
-    <div class="header-bottom-area m-top bg-image padding-bottom-120 padding-top-120" style="background-image: url(assets/img/bg/02.png);">
+    <div class="header-bottom-area m-top bg-image padding-bottom-120 padding-top-120">
         <div class="container">
             <div class="row">
                 <div class="col-xl-5 col-lg-12">

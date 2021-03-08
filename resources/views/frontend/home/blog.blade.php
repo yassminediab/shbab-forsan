@@ -1,6 +1,6 @@
    @if(! empty($blogSection))
    <!-- blog area start  -->
-   <section class="blog-area bg-image padding-top-120 padding-bottom-40" style="background-image: url(assets/img/bg/03.png);">
+   <section class="blog-area bg-image padding-top-120 padding-bottom-40">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

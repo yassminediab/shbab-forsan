@@ -2,7 +2,7 @@
     <div class="row">
         @foreach($areas as $area)
             <div class="col-lg-6 col-xl-4 col-md-6">
-                <div class="volunteer-single-item margin-bottom-30 bg-image" style="background-image: url(assets/img/volunteer/bg.png);">
+                <div class="volunteer-single-item margin-bottom-30 bg-image">
                     <div class="icon">
                         <i class="fa {{ $area->icon }}"></i>
                     </div>
