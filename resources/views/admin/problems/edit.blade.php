@@ -148,32 +148,32 @@
                                     <option @if($problem->icon == 'fa-battery-full')selected @endif value='fa-battery-full'>&#xf240; fa-battery-full</option>
                                     <option @if($problem->icon == 'fa-battery-half')selected @endif value='fa-battery-half'>&#xf242; fa-battery-half</option>
                                     <option @if($problem->icon == 'fa-battery-quarter')selected @endif value='fa-battery-quarter'>&#xf243; fa-battery-quarter</option>
-                                    <option value='fa-battery-three-quarters'>&#xf241; fa-battery-three-quarters</option>
-                                    <option value='fa-bed'>&#xf236; fa-bed</option>
-                                    <option value='fa-beer'>&#xf0fc; fa-beer</option>
-                                    <option value='fa-behance'>&#xf1b4; fa-behance</option>
-                                    <option value='fa-behance-square'>&#xf1b5; fa-behance-square</option>
-                                    <option value='fa-bell'>&#xf0f3; fa-bell</option>
-                                    <option value='fa-bell-o'>&#xf0a2; fa-bell-o</option>
-                                    <option value='fa-bell-slash'>&#xf1f6; fa-bell-slash</option>
-                                    <option value='fa-bell-slash-o'>&#xf1f7; fa-bell-slash-o</option>
-                                    <option value='fa-bicycle'>&#xf206; fa-bicycle</option>
-                                    <option value='fa-binoculars'>&#xf1e5; fa-binoculars</option>
-                                    <option value='fa-birthday-cake'>&#xf1fd; fa-birthday-cake</option>
-                                    <option value='fa-bitbucket'>&#xf171; fa-bitbucket</option>
-                                    <option value='fa-bitbucket-square'>&#xf172; fa-bitbucket-square</option>
-                                    <option value='fa-bitcoin'>&#xf15a; fa-bitcoin</option>
-                                    <option value='fa-black-tie'>&#xf27e; fa-black-tie</option>
-                                    <option value='fa-blind'>&#xf29d; fa-blind</option>
-                                    <option value='fa-bluetooth'>&#xf293; fa-bluetooth</option>
-                                    <option value='fa-bluetooth-b'>&#xf294; fa-bluetooth-b</option>
-                                    <option value='fa-bold'>&#xf032; fa-bold</option>
-                                    <option value='fa-bolt'>&#xf0e7; fa-bolt</option>
-                                    <option value='fa-bomb'>&#xf1e2; fa-bomb</option>
-                                    <option value='fa-book'>&#xf02d; fa-book</option>
-                                    <option value='fa-bookmark'>&#xf02e; fa-bookmark</option>
-                                    <option value='fa-bookmark-o'>&#xf097; fa-bookmark-o</option>
-                                    <option value='fa-braille'>&#xf2a1; fa-braille</option>
+                                    <option @if($problem->icon == 'fa-battery-three-quarters')selected @endif value='fa-battery-three-quarters'>&#xf241; fa-battery-three-quarters</option>
+                                    <option @if($problem->icon == 'fa-bed')selected @endif  value='fa-bed'>&#xf236; fa-bed</option>
+                                    <option @if($problem->icon == 'fa-beer')selected @endif  value='fa-beer'>&#xf0fc; fa-beer</option>
+                                    <option @if($problem->icon == 'fa-behance')selected @endif  value='fa-behance'>&#xf1b4; fa-behance</option>
+                                    <option @if($problem->icon == 'fa-behance-square')selected @endif  value='fa-behance-square'>&#xf1b5; fa-behance-square</option>
+                                    <option @if($problem->icon == 'fa-bell')selected @endif  value='fa-bell'>&#xf0f3; fa-bell</option>
+                                    <option @if($problem->icon == 'fa-bell-o')selected @endif  value='fa-bell-o'>&#xf0a2; fa-bell-o</option>
+                                    <option @if($problem->icon == 'fa-bell-slash')selected @endif  value='fa-bell-slash'>&#xf1f6; fa-bell-slash</option>
+                                    <option @if($problem->icon == 'fa-bell-slash-o')selected @endif  value='fa-bell-slash-o'>&#xf1f7; fa-bell-slash-o</option>
+                                    <option @if($problem->icon == 'fa-bicycle')selected @endif  value='fa-bicycle'>&#xf206; fa-bicycle</option>
+                                    <option @if($problem->icon == 'fa-binoculars')selected @endif  value='fa-binoculars'>&#xf1e5; fa-binoculars</option>
+                                    <option @if($problem->icon == 'fa-birthday-cake')selected @endif  value='fa-birthday-cake'>&#xf1fd; fa-birthday-cake</option>
+                                    <option @if($problem->icon == 'fa-bitbucket')selected @endif  value='fa-bitbucket'>&#xf171; fa-bitbucket</option>
+                                    <option @if($problem->icon == 'fa-bitbucket-square')selected @endif  value='fa-bitbucket-square'>&#xf172; fa-bitbucket-square</option>
+                                    <option @if($problem->icon == 'fa-bitcoin')selected @endif  value='fa-bitcoin'>&#xf15a; fa-bitcoin</option>
+                                    <option @if($problem->icon == 'fa-black-tie')selected @endif  value='fa-black-tie'>&#xf27e; fa-black-tie</option>
+                                    <option @if($problem->icon == 'fa-blind')selected @endif  value='fa-blind'>&#xf29d; fa-blind</option>
+                                    <option @if($problem->icon == 'fa-bluetooth')selected @endif  value='fa-bluetooth'>&#xf293; fa-bluetooth</option>
+                                    <option @if($problem->icon == 'fa-bluetooth-b')selected @endif  value='fa-bluetooth-b'>&#xf294; fa-bluetooth-b</option>
+                                    <option @if($problem->icon == 'fa-bold')selected @endif  value='fa-bold'>&#xf032; fa-bold</option>
+                                    <option @if($problem->icon == 'fa-bolt')selected @endif  value='fa-bolt'>&#xf0e7; fa-bolt</option>
+                                    <option @if($problem->icon == 'fa-bomb')selected @endif  value='fa-bomb'>&#xf1e2; fa-bomb</option>
+                                    <option @if($problem->icon == 'fa-book')selected @endif  value='fa-book'>&#xf02d; fa-book</option>
+                                    <option @if($problem->icon == 'fa-bookmark')selected @endif  value='fa-bookmark'>&#xf02e; fa-bookmark</option>
+                                    <option @if($problem->icon == 'fa-bookmark-o')selected @endif  value='fa-bookmark-o'>&#xf097; fa-bookmark-o</option>
+                                    <option @if($problem->icon == 'fa-braille')selected @endif  value='fa-braille'>&#xf2a1; fa-braille</option>
                                     <option value='fa-briefcase'>&#xf0b1; fa-briefcase</option>
                                     <option value='fa-btc'>&#xf15a; fa-btc</option>
                                     <option value='fa-bug'>&#xf188; fa-bug</option>
