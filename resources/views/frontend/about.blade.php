@@ -46,14 +46,14 @@
                     <div class="col-lg-7 offset-lg-5">
                         <div class="about-content">
                             <div class="section-title">
-                                <h3 class="title">Our Mission</h3>
-                                <p>We are a non-profit organisation in USA that works towards supporting underprivileged children reach their full potential - physical, mental as well as emotional. </p>
+                                <h3 class="title">{{__('Our Mission'}}</h3>
+                                <p>{{__('We are a non-profit organisation in USA that works towards supporting underprivileged children reach their full potential - physical, mental as well as emotional.')}} </p>
                             </div>
                             <div class="content">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-check"></i>If you want to change the world</a></li>
-                                    <li><a href="#"><i class="fas fa-check"></i>Wish at a time, help kids like Ramesh</a></li>
-                                    <li><a href="#"><i class="fas fa-check"></i>Sheetal reach their full potential.</a></li>
+                                    <li><a href="#"><i class="fas fa-check"></i>{{__('If you want to change the world')}}</a></li>
+                                    <li><a href="#"><i class="fas fa-check"></i>{{__('Wish at a time, help kids like Ramesh')}}</a></li>
+                                    <li><a href="#"><i class="fas fa-check"></i>{{__('Sheetal reach their full potential')}}.</a></li>
                                 </ul>
                             </div>
                         </div>
