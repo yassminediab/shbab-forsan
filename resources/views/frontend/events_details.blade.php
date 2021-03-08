@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url(assets/img/breadcrumb/01.jpg);">
+    <div class="breadcrumb-area" style="background-image:url({{asset('images/'.$pageSetting->image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,10 +9,10 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">{{ __('Events') }}</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
-                            <li><a href="index-2.html">{{ __('Home') }}</a></li>
-                            <li><a href="#">{{ __('Events') }}</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="col-lg-8">
                     <div class="events-details-item">
                         <div class="thumb margin-bottom-20">
-                            <img src="{{ asset('images/'. $event->image) }}" alt="@if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif    
+                            <img src="{{ asset('images/'. $event->image) }}" alt="@if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif
                             ">
                             <div class="post-time">
                                 <h5 class="title"> {{ $event->date->format('d') }}</h5>
@@ -35,23 +35,23 @@
                         </div>
                         <div class="content">
                             <h4 class="title"><a href="#">
-                                @if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif    
+                                @if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif
                             </a></h4>
                             <ul class="post-meta">
-                                <li><a href="#"><i class="fas fa-map-marker-alt"></i>@if(app()->getLocale() == "en") {{ $event->location_en }} @else {{ $event->location_ar }} @endif    
+                                <li><a href="#"><i class="fas fa-map-marker-alt"></i>@if(app()->getLocale() == "en") {{ $event->location_en }} @else {{ $event->location_ar }} @endif
                                 </a></li>
                                 <li><a href="#"><i class="far fa-clock"></i>{{ $event->time_from }}    -   {{  $event->time_to }}</a></li>
                             </ul>
                             <p>
-                                @if(app()->getLocale() == "en") {!! $event->content_en !!} @else {!! $event->content_ar !!}  @endif    
+                                @if(app()->getLocale() == "en") {!! $event->content_en !!} @else {!! $event->content_ar !!}  @endif
 
-                            </p>                          
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="widget-area">
-                       
+
                         <div class="widget widget_event style-01">
                             <h3 class="widget-title style-02">{{ __('Event Details') }}</h3>
                             <ul>
@@ -65,7 +65,7 @@
                         <div class="widget widget_map style-01">
                             <h4 class="widget-title style-02">{{ __('Event Location') }}</h4>
                             <p class="widget-para">
-                                @if(app()->getLocale() == "en") {{ $event->location_en }} @else {{ $event->location_ar }} @endif    
+                                @if(app()->getLocale() == "en") {{ $event->location_en }} @else {{ $event->location_ar }} @endif
                             </p>
                             @if($event->lat && $event->lng)
                                 <div class="contact_map-02">
@@ -79,4 +79,4 @@
             </div>
         </div>
     </div>
-@endsection  
+@endsection

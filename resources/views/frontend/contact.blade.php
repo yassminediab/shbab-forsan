@@ -2,7 +2,7 @@
     @extends('frontend.layouts.header')
     @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url(assets/img/breadcrumb/01.jpg);">
+    <div class="breadcrumb-area" style="background-image:url({{asset('images/'.$pageSetting->image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -10,10 +10,10 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">{{ __('Contact Us') }}</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
-                            <li><a href="index-2.html">{{ __('Home') }}</a></li>
-                            <li><a href="#">{{ __('Contact Us') }}</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="content">
                                     <p class="details">
-                                      @if(app()->getLocale() == "en") {{ $footer->address_en }} @else {{ $footer->address_ar }} @endif        
+                                      @if(app()->getLocale() == "en") {{ $footer->address_en }} @else {{ $footer->address_ar }} @endif
                                     </p>
                                 </div>
                             </div>
@@ -119,4 +119,3 @@
         </div>
     </div> --}}
 @endsection
- 

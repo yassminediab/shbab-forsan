@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url(assets/img/breadcrumb/01.jpg);">
+    <div class="breadcrumb-area" style="background-image:url({{asset('images/'.$pageSetting->image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,10 +9,10 @@
                         <div class="icon">
                             <img src="assets/img/icon/01.png" alt="">
                         </div>
-                        <h2 class="page-title">Latest Blog</h2>
+                        <h2 class="page-title">@if(app()->getLocale() == "en")  {{$pageSetting->title_en}}@else {{$pageSetting->title_ar}}@endif</h2>
                         <ul class="page-list">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li><a href="#">Latest Blog </a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="#">{{$pageSetting->title_en}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                                     <li><a href="#">Comments<span>(03)</span></a></li>
                                 </ul> --}}
                                 <h4 class="title"><a href="#">
-                                    @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif    
+                                    @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif
                                 </a></h4>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="widget-area">
-                      
+
                         <div class="widget widget_archive style-01">
                             <h3 class="widget-title style-01">{{ __('Categories') }}</h3>
                             <ul>
@@ -96,5 +96,4 @@
             </div>
         </div>
     </div>
-@endsection    
-   
+@endsection

@@ -135,6 +135,7 @@
                                 <ul>
                                     <li><a href="{{ url('admin/about-us') }}">view About Us</a></li>
                                     <li><a href="{{ url('admin/volunteer/section') }}">view volunteer</a></li>
+                                    <li><a href="{{ url('admin/page/settings') }}">view settings</a></li>
                                 </ul>
                             </li>
 
@@ -187,7 +188,7 @@
                                 </ul>
                             </li>
 
-                          
+
                         </ul>
                     </div>
                 </div>
@@ -204,7 +205,7 @@
             @yield('content')
         </div>
         <!-- /main content -->
-        
+
     </div>
     <!-- /page content -->
 
