@@ -20,7 +20,7 @@
             <form class="form-horizontal" action="{{ url('admin/problems/update') }}" method="post"  enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{ $problem->id }}">
-        
+
                 <ul class="nav nav-tabs nav-tabs-highlight">
                     <li class="active"><a href="#general-tab" data-toggle="tab">Genral</a></li>
                     <li><a href="#data-tab" data-toggle="tab">Data</span></a></li>
@@ -77,77 +77,77 @@
                             <label class="control-label col-lg-2">Icon</label>
                             <div class="col-lg-10">
                                <select name="icon" class="form-control">
-                                    <option value='fa-500px'>&#xf26e; fa-500px</option>
-                                    <option value='fa-address-book'>&#xf2b9; fa-address-book</option>
-                                    <option value='fa-address-book-o'>&#xf2ba; fa-address-book-o</option>
-                                    <option value='fa-address-card'>&#xf2bb; fa-address-card</option>
-                                    <option value='fa-address-card-o'>&#xf2bc; fa-address-card-o</option>
-                                    <option value='fa-adjust'>&#xf042; fa-adjust</option>
-                                    <option value='fa-adn'>&#xf170; fa-adn</option>
-                                    <option value='fa-align-center'>&#xf037; fa-align-center</option>
-                                    <option value='fa-align-justify'>&#xf039; fa-align-justify</option>
-                                    <option value='fa-align-left'>&#xf036; fa-align-left</option>
-                                    <option value='fa-align-right'>&#xf038; fa-align-right</option>
-                                    <option value='fa-amazon'>&#xf270; fa-amazon</option>
-                                    <option value='fa-ambulance'>&#xf0f9; fa-ambulance</option>
-                                    <option value='fa-american-sign-language-interpreting'>&#xf2a3; fa-american-sign-language-interpreting</option>
-                                    <option value='fa-anchor'>&#xf13d; fa-anchor</option>
-                                    <option value='fa-android'>&#xf17b; fa-android</option>
-                                    <option value='fa-angellist'>&#xf209; fa-angellist</option>
-                                    <option value='fa-angle-double-down'>&#xf103; fa-angle-double-down</option>
-                                    <option value='fa-angle-double-left'>&#xf100; fa-angle-double-left</option>
-                                    <option value='fa-angle-double-right'>&#xf101; fa-angle-double-right</option>
-                                    <option value='fa-angle-double-up'>&#xf102; fa-angle-double-up</option>
-                                    <option value='fa-angle-down'>&#xf107; fa-angle-down</option>
-                                    <option value='fa-angle-left'>&#xf104; fa-angle-left</option>
-                                    <option value='fa-angle-right'>&#xf105; fa-angle-right</option>
-                                    <option value='fa-angle-up'>&#xf106; fa-angle-up</option>
-                                    <option value='fa-apple'>&#xf179; fa-apple</option>
-                                    <option value='fa-archive'>&#xf187; fa-archive</option>
-                                    <option value='fa-area-chart'>&#xf1fe; fa-area-chart</option>
-                                    <option value='fa-arrow-circle-down'>&#xf0ab; fa-arrow-circle-down</option>
-                                    <option value='fa-arrow-circle-left'>&#xf0a8; fa-arrow-circle-left</option>
-                                    <option value='fa-arrow-circle-o-down'>&#xf01a; fa-arrow-circle-o-down</option>
-                                    <option value='fa-arrow-circle-o-left'>&#xf190; fa-arrow-circle-o-left</option>
-                                    <option value='fa-arrow-circle-o-right'>&#xf18e; fa-arrow-circle-o-right</option>
-                                    <option value='fa-arrow-circle-o-up'>&#xf01b; fa-arrow-circle-o-up</option>
-                                    <option value='fa-arrow-circle-right'>&#xf0a9; fa-arrow-circle-right</option>
-                                    <option value='fa-arrow-circle-up'>&#xf0aa; fa-arrow-circle-up</option>
-                                    <option value='fa-arrow-down'>&#xf063; fa-arrow-down</option>
-                                    <option value='fa-arrow-left'>&#xf060; fa-arrow-left</option>
-                                    <option value='fa-arrow-right'>&#xf061; fa-arrow-right</option>
-                                    <option value='fa-arrow-up'>&#xf062; fa-arrow-up</option>
-                                    <option value='fa-arrows'>&#xf047; fa-arrows</option>
-                                    <option value='fa-arrows-alt'>&#xf0b2; fa-arrows-alt</option>
-                                    <option value='fa-arrows-h'>&#xf07e; fa-arrows-h</option>
-                                    <option value='fa-arrows-v'>&#xf07d; fa-arrows-v</option>
-                                    <option value='fa-asl-interpreting'>&#xf2a3; fa-asl-interpreting</option>
-                                    <option value='fa-assistive-listening-systems'>&#xf2a2; fa-assistive-listening-systems</option>
-                                    <option value='fa-asterisk'>&#xf069; fa-asterisk</option>
-                                    <option value='fa-at'>&#xf1fa; fa-at</option>
-                                    <option value='fa-audio-description'>&#xf29e; fa-audio-description</option>
-                                    <option value='fa-automobile'>&#xf1b9; fa-automobile</option>
-                                    <option value='fa-backward'>&#xf04a; fa-backward</option>
-                                    <option value='fa-balance-scale'>&#xf24e; fa-balance-scale</option>
-                                    <option value='fa-ban'>&#xf05e; fa-ban</option>
-                                    <option value='fa-bandcamp'>&#xf2d5; fa-bandcamp</option>
-                                    <option value='fa-bank'>&#xf19c; fa-bank</option>
-                                    <option value='fa-bar-chart'>&#xf080; fa-bar-chart</option>
-                                    <option value='fa-bar-chart-o'>&#xf080; fa-bar-chart-o</option>
-                                    <option value='fa-barcode'>&#xf02a; fa-barcode</option>
-                                    <option value='fa-bars'>&#xf0c9; fa-bars</option>
-                                    <option value='fa-bath'>&#xf2cd; fa-bath</option>
-                                    <option value='fa-bathtub'>&#xf2cd; fa-bathtub</option>
-                                    <option value='fa-battery'>&#xf240; fa-battery</option>
-                                    <option value='fa-battery-0'>&#xf244; fa-battery-0</option>
-                                    <option value='fa-battery-1'>&#xf243; fa-battery-1</option>
-                                    <option value='fa-battery-2'>&#xf242; fa-battery-2</option>
-                                    <option value='fa-battery-3'>&#xf241; fa-battery-3</option>
-                                    <option value='fa-battery-4'>&#xf240; fa-battery-4</option>
-                                    <option value='fa-battery-empty'>&#xf244; fa-battery-empty</option>
-                                    <option value='fa-battery-full'>&#xf240; fa-battery-full</option>
-                                    <option value='fa-battery-half'>&#xf242; fa-battery-half</option>
-                                    <option value='fa-battery-quarter'>&#xf243; fa-battery-quarter</option>
+                                    <option @if($problem->icon == 'fa-address-book')selected @endif value='fa-address-book'>&#xf2b9; fa-address-book</option>
+                                   <option @if($problem->icon == 'fa-address-book-o')selected @endif value='fa-address-book-o'>&#xf2ba; fa-address-book-o</option>
+                                   <option @if($problem->icon == 'fa-500px')selected @endif value='fa-500px'>&#xf26e; fa-500px</option>
+                                   <option @if($problem->icon == 'fa-address-card')selected @endif value='fa-address-card'>&#xf2bb; fa-address-card</option>
+                                    <option @if($problem->icon == 'fa-address-book-card-o')selected @endif value='fa-address-card-o'>&#xf2bc; fa-address-card-o</option>
+                                    <option @if($problem->icon == 'fa-adjust')selected @endif value='fa-adjust'>&#xf042; fa-adjust</option>
+                                    <option @if($problem->icon == 'fa-adn')selected @endif value='fa-adn'>&#xf170; fa-adn</option>
+                                    <option @if($problem->icon == 'fa-align-center')selected @endif value='fa-align-center'>&#xf037; fa-align-center</option>
+                                    <option @if($problem->icon == 'fa-align-justify')selected @endif value='fa-align-justify'>&#xf039; fa-align-justify</option>
+                                    <option @if($problem->icon == 'fa-align-left')selected @endif value='fa-align-left'>&#xf036; fa-align-left</option>
+                                    <option @if($problem->icon == 'fa-align-right')selected @endif value='fa-align-right'>&#xf038; fa-align-right</option>
+                                    <option @if($problem->icon == 'fa-amazon')selected @endif value='fa-amazon'>&#xf270; fa-amazon</option>
+                                    <option @if($problem->icon == 'fa-ambulance')selected @endif value='fa-ambulance'>&#xf0f9; fa-ambulance</option>
+                                    <option @if($problem->icon == 'fa-american-sign-language-interpreting')selected @endif value='fa-american-sign-language-interpreting'>&#xf2a3; fa-american-sign-language-interpreting</option>
+                                    <option @if($problem->icon == 'fa-anchor')selected @endif value='fa-anchor'>&#xf13d; fa-anchor</option>
+                                    <option @if($problem->icon == 'fa-android')selected @endif value='fa-android'>&#xf17b; fa-android</option>
+                                    <option @if($problem->icon == 'fa-angellist')selected @endif value='fa-angellist'>&#xf209; fa-angellist</option>
+                                    <option @if($problem->icon == 'fa-angle-double-down')selected @endif value='fa-angle-double-down'>&#xf103; fa-angle-double-down</option>
+                                    <option  @if($problem->icon == 'fa-angle-double-left')selected @endif value='fa-angle-double-left'>&#xf100; fa-angle-double-left</option>
+                                    <option @if($problem->icon == 'fa-angle-double-right')selected @endif value='fa-angle-double-right'>&#xf101; fa-angle-double-right</option>
+                                    <option @if($problem->icon == 'fa-angle-double-up')selected @endif value='fa-angle-double-up'>&#xf102; fa-angle-double-up</option>
+                                    <option @if($problem->icon == 'fa-angle-down')selected @endif value='fa-angle-down'>&#xf107; fa-angle-down</option>
+                                    <option @if($problem->icon == 'fa-angle-left')selected @endif value='fa-angle-left'>&#xf104; fa-angle-left</option>
+                                    <option @if($problem->icon == 'fa-angle-right')selected @endif value='fa-angle-right'>&#xf105; fa-angle-right</option>
+                                    <option @if($problem->icon == 'fa-')selected @endif value='fa-angle-up'>&#xf106; fa-angle-up</option>
+                                    <option @if($problem->icon == 'fa-apple')selected @endif value='fa-apple'>&#xf179; fa-apple</option>
+                                    <option @if($problem->icon == 'fa-archive')selected @endif value='fa-archive'>&#xf187; fa-archive</option>
+                                    <option @if($problem->icon == 'fa-area-chart')selected @endif value='fa-area-chart'>&#xf1fe; fa-area-chart</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-dow')selected @endif value='fa-arrow-circle-down'>&#xf0ab; fa-arrow-circle-down</option>
+                                    <option  @if($problem->icon == 'fa-arrow-circle-left')selected @endifvalue='fa-arrow-circle-left'>&#xf0a8; fa-arrow-circle-left</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-o-down')selected @endif value='fa-arrow-circle-o-down'>&#xf01a; fa-arrow-circle-o-down</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-o-left')selected @endif value='fa-arrow-circle-o-left'>&#xf190; fa-arrow-circle-o-left</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-o-right')selected @endif value='fa-arrow-circle-o-right'>&#xf18e; fa-arrow-circle-o-right</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-o-up')selected @endif value='fa-arrow-circle-o-up'>&#xf01b; fa-arrow-circle-o-up</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-right')selected @endif value='fa-arrow-circle-right'>&#xf0a9; fa-arrow-circle-right</option>
+                                    <option @if($problem->icon == 'fa-arrow-circle-up')selected @endif value='fa-arrow-circle-up'>&#xf0aa; fa-arrow-circle-up</option>
+                                    <option @if($problem->icon == 'fa-arrow-down')selected @endif value='fa-arrow-down'>&#xf063; fa-arrow-down</option>
+                                    <option @if($problem->icon == 'fa-arrow-left')selected @endif value='fa-arrow-left'>&#xf060; fa-arrow-left</option>
+                                    <option @if($problem->icon == 'fa-arrow-right')selected @endif value='fa-arrow-right'>&#xf061; fa-arrow-right</option>
+                                    <option @if($problem->icon == 'fa-arrow-up')selected @endif value='fa-arrow-up'>&#xf062; fa-arrow-up</option>
+                                    <option @if($problem->icon == 'fa-arrows')selected @endif value='fa-arrows'>&#xf047; fa-arrows</option>
+                                    <option @if($problem->icon == 'fa-arrows-alt')selected @endif value='fa-arrows-alt'>&#xf0b2; fa-arrows-alt</option>
+                                    <option @if($problem->icon == 'fa-arrows-h')selected @endif value='fa-arrows-h'>&#xf07e; fa-arrows-h</option>
+                                    <option @if($problem->icon == 'fa-arrows-v')selected @endif value='fa-arrows-v'>&#xf07d; fa-arrows-v</option>
+                                    <option @if($problem->icon == 'fa-asl-interpreting')selected @endif value='fa-asl-interpreting'>&#xf2a3; fa-asl-interpreting</option>
+                                    <option @if($problem->icon == 'fa-assistive-listening-systems')selected @endif value='fa-assistive-listening-systems'>&#xf2a2; fa-assistive-listening-systems</option>
+                                    <option @if($problem->icon == 'fa-asterisk')selected @endif value='fa-asterisk'>&#xf069; fa-asterisk</option>
+                                    <option @if($problem->icon == 'fa-at')selected @endif value='fa-at'>&#xf1fa; fa-at</option>
+                                    <option @if($problem->icon == 'fa-audio-description')selected @endif value='fa-audio-description'>&#xf29e; fa-audio-description</option>
+                                    <option @if($problem->icon == 'fa-automobile')selected @endif value='fa-automobile'>&#xf1b9; fa-automobile</option>
+                                    <option @if($problem->icon == 'fa-backward')selected @endif value='fa-backward'>&#xf04a; fa-backward</option>
+                                    <option @if($problem->icon == 'fa-balance-scale')selected @endif value='fa-balance-scale'>&#xf24e; fa-balance-scale</option>
+                                    <option @if($problem->icon == 'fa-ban')selected @endif value='fa-ban'>&#xf05e; fa-ban</option>
+                                    <option @if($problem->icon == 'fa-bandcamp')selected @endif value='fa-bandcamp'>&#xf2d5; fa-bandcamp</option>
+                                    <option @if($problem->icon == 'fa-bank')selected @endif value='fa-bank'>&#xf19c; fa-bank</option>
+                                    <option @if($problem->icon == 'fa-bar-chart')selected @endif value='fa-bar-chart'>&#xf080; fa-bar-chart</option>
+                                    <option @if($problem->icon == 'fa-bar-chart-o')selected @endif value='fa-bar-chart-o'>&#xf080; fa-bar-chart-o</option>
+                                    <option @if($problem->icon == 'fa-barcode')selected @endif value='fa-barcode'>&#xf02a; fa-barcode</option>
+                                    <option @if($problem->icon == 'fa-bars')selected @endif value='fa-bars'>&#xf0c9; fa-bars</option>
+                                    <option @if($problem->icon == 'fa-bath')selected @endif value='fa-bath'>&#xf2cd; fa-bath</option>
+                                    <option @if($problem->icon == 'fa-bathtub')selected @endif value='fa-bathtub'>&#xf2cd; fa-bathtub</option>
+                                    <option @if($problem->icon == 'fa-battery')selected @endif value='fa-battery'>&#xf240; fa-battery</option>
+                                    <option @if($problem->icon == 'fa-battery-0')selected @endif value='fa-battery-0'>&#xf244; fa-battery-0</option>
+                                    <option @if($problem->icon == 'fa-battery-1')selected @endif value='fa-battery-1'>&#xf243; fa-battery-1</option>
+                                    <option @if($problem->icon == 'fa-battery-2')selected @endif value='fa-battery-2'>&#xf242; fa-battery-2</option>
+                                    <option @if($problem->icon == 'fa-battery-3')selected @endif value='fa-battery-3'>&#xf241; fa-battery-3</option>
+                                    <option @if($problem->icon == 'fa-battery-4')selected @endif value='fa-battery-4'>&#xf240; fa-battery-4</option>
+                                    <option @if($problem->icon == 'fa-battery-empty')selected @endif value='fa-battery-empty'>&#xf244; fa-battery-empty</option>
+                                    <option @if($problem->icon == 'fa-battery-full')selected @endif value='fa-battery-full'>&#xf240; fa-battery-full</option>
+                                    <option @if($problem->icon == 'fa-battery-half')selected @endif value='fa-battery-half'>&#xf242; fa-battery-half</option>
+                                    <option @if($problem->icon == 'fa-battery-quarter')selected @endif value='fa-battery-quarter'>&#xf243; fa-battery-quarter</option>
                                     <option value='fa-battery-three-quarters'>&#xf241; fa-battery-three-quarters</option>
                                     <option value='fa-bed'>&#xf236; fa-bed</option>
                                     <option value='fa-beer'>&#xf0fc; fa-beer</option>
@@ -877,7 +877,7 @@
     <!-- /form horizontal -->
 
 @include('admin.layouts.footer')
-      
+
 
 </div>
 <!-- /content area -->
