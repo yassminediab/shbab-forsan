@@ -174,29 +174,29 @@
                                     <option @if($problem->icon == 'fa-bookmark')selected @endif  value='fa-bookmark'>&#xf02e; fa-bookmark</option>
                                     <option @if($problem->icon == 'fa-bookmark-o')selected @endif  value='fa-bookmark-o'>&#xf097; fa-bookmark-o</option>
                                     <option @if($problem->icon == 'fa-braille')selected @endif  value='fa-braille'>&#xf2a1; fa-braille</option>
-                                    <option value='fa-briefcase'>&#xf0b1; fa-briefcase</option>
-                                    <option value='fa-btc'>&#xf15a; fa-btc</option>
-                                    <option value='fa-bug'>&#xf188; fa-bug</option>
-                                    <option value='fa-building'>&#xf1ad; fa-building</option>
-                                    <option value='fa-building-o'>&#xf0f7; fa-building-o</option>
-                                    <option value='fa-bullhorn'>&#xf0a1; fa-bullhorn</option>
-                                    <option value='fa-bullseye'>&#xf140; fa-bullseye</option>
-                                    <option value='fa-bus'>&#xf207; fa-bus</option>
-                                    <option value='fa-buysellads'>&#xf20d; fa-buysellads</option>
-                                    <option value='fa-cab'>&#xf1ba; fa-cab</option>
-                                    <option value='fa-calculator'>&#xf1ec; fa-calculator</option>
-                                    <option value='fa-calendar'>&#xf073; fa-calendar</option>
-                                    <option value='fa-calendar-check-o'>&#xf274; fa-calendar-check-o</option>
-                                    <option value='fa-calendar-minus-o'>&#xf272; fa-calendar-minus-o</option>
-                                    <option value='fa-calendar-o'>&#xf133; fa-calendar-o</option>
-                                    <option value='fa-calendar-plus-o'>&#xf271; fa-calendar-plus-o</option>
-                                    <option value='fa-calendar-times-o'>&#xf273; fa-calendar-times-o</option>
-                                    <option value='fa-camera'>&#xf030; fa-camera</option>
-                                    <option value='fa-camera-retro'>&#xf083; fa-camera-retro</option>
-                                    <option value='fa-car'>&#xf1b9; fa-car</option>
-                                    <option value='fa-caret-down'>&#xf0d7; fa-caret-down</option>
-                                    <option value='fa-caret-left'>&#xf0d9; fa-caret-left</option>
-                                    <option value='fa-caret-right'>&#xf0da; fa-caret-right</option>
+                                    <option @if($problem->icon == 'fa-briefcase')selected @endif value='fa-briefcase'>&#xf0b1; fa-briefcase</option>
+                                    <option @if($problem->icon == 'fa-btc')selected @endif  value='fa-btc'>&#xf15a; fa-btc</option>
+                                    <option @if($problem->icon == 'fa-bug')selected @endif  value='fa-bug'>&#xf188; fa-bug</option>
+                                    <option @if($problem->icon == 'fa-building')selected @endif  value='fa-building'>&#xf1ad; fa-building</option>
+                                    <option @if($problem->icon == 'fa-building-o')selected @endif value='fa-building-o'>&#xf0f7; fa-building-o</option>
+                                    <option @if($problem->icon == 'fa-bullhorn')selected @endif value='fa-bullhorn'>&#xf0a1; fa-bullhorn</option>
+                                    <option @if($problem->icon == 'fa-bullseye')selected @endif value='fa-bullseye'>&#xf140; fa-bullseye</option>
+                                    <option @if($problem->icon == 'fa-bus')selected @endif value='fa-bus'>&#xf207; fa-bus</option>
+                                    <option @if($problem->icon == 'fa-buysellads')selected @endif value='fa-buysellads'>&#xf20d; fa-buysellads</option>
+                                    <option @if($problem->icon == 'fa-cab')selected @endif value='fa-cab'>&#xf1ba; fa-cab</option>
+                                    <option @if($problem->icon == 'fa-calculator')selected @endif value='fa-calculator'>&#xf1ec; fa-calculator</option>
+                                    <option @if($problem->icon == 'fa-calendar')selected @endif value='fa-calendar'>&#xf073; fa-calendar</option>
+                                    <option @if($problem->icon == 'fa-calendar-check-o')selected @endif value='fa-calendar-check-o'>&#xf274; fa-calendar-check-o</option>
+                                    <option @if($problem->icon == 'fa-calendar-minus-o')selected @endif value='fa-calendar-minus-o'>&#xf272; fa-calendar-minus-o</option>
+                                    <option @if($problem->icon == 'fa-calendar-o')selected @endif value='fa-calendar-o'>&#xf133; fa-calendar-o</option>
+                                    <option @if($problem->icon == 'fa-calendar-plus-o')selected @endif value='fa-calendar-plus-o'>&#xf271; fa-calendar-plus-o</option>
+                                    <option @if($problem->icon == 'fa-calendar-times-o')selected @endif value='fa-calendar-times-o'>&#xf273; fa-calendar-times-o</option>
+                                    <option @if($problem->icon == 'fa-camera')selected @endif value='fa-camera'>&#xf030; fa-camera</option>
+                                    <option @if($problem->icon == 'fa-camera-retro')selected @endif value='fa-camera-retro'>&#xf083; fa-camera-retro</option>
+                                    <option @if($problem->icon == 'fa-car')selected @endif value='fa-car'>&#xf1b9; fa-car</option>
+                                    <option @if($problem->icon == 'fa-caret-down')selected @endif value='fa-caret-down'>&#xf0d7; fa-caret-down</option>
+                                    <option @if($problem->icon == 'fa-caret-left')selected @endif value='fa-caret-left'>&#xf0d9; fa-caret-left</option>
+                                    <option @if($problem->icon == 'fa-caret-right')selected @endif value='fa-caret-right'>&#xf0da; fa-caret-right</option>
                                     <option value='fa-caret-square-o-down'>&#xf150; fa-caret-square-o-down</option>
                                     <option value='fa-caret-square-o-left'>&#xf191; fa-caret-square-o-left</option>
                                     <option value='fa-caret-square-o-right'>&#xf152; fa-caret-square-o-right</option>

@@ -143,17 +143,17 @@
                             <li>
                                 <a href="#"><i class="icon-grid6"></i> <span>Home Pgae</span></a>
                                 <ul>
-                                    <li><a href="{{ url('admin/slider') }}">view Slider</a></li>
-                                    <li><a href="{{ url('admin/area/section') }}">view Area</a></li>
-                                    <li><a href="{{ url('admin/aboutSection') }}">view About</a></li>
-                                    <li><a href="{{ url('admin/video') }}">view Video</a></li>
-                                    <li><a href="{{ url('admin/number') }}">view number</a></li>
-                                    <li><a href="{{ url('admin/blog/section') }}">view blog</a></li>
-                                    <li><a href="{{ url('admin/problems') }}">view problem</a></li>
-                                    <li><a href="{{ url('admin/problem/section') }}">view problem section</a></li>
-                                    <li><a href="{{ url('admin/testimonial/section') }}">view Tistimonial Section</a></li>
-                                    <li><a href="{{ url('admin/testimonials') }}">view Tistimonial</a></li>
-                                    <li><a href="{{ url('admin/case/section') }}">view case</a></li>
+                                    <li><a href="{{ url('admin/slider') }}">View Slider</a></li>
+                                    <li><a href="{{ url('admin/area/section') }}">View Area Section</a></li>
+                                    <li><a href="{{ url('admin/aboutSection') }}">View About Section</a></li>
+                                    <li><a href="{{ url('admin/case/section') }}">View Cases Section</a></li>
+                                    <li><a href="{{ url('admin/video') }}">View Video Section</a></li>
+                                    <li><a href="{{ url('admin/number') }}">View Numbers Section</a></li>
+                                    <li><a href="{{ url('admin/blog/section') }}">View Blogs Section</a></li>
+                                    <li><a href="{{ url('admin/problems') }}">View Problem</a></li>
+                                    <li><a href="{{ url('admin/problem/section') }}">View problem section</a></li>
+                                    <li><a href="{{ url('admin/testimonial/section') }}">View Tistimonial Section</a></li>
+                                    <li><a href="{{ url('admin/testimonials') }}">View Tistimonial</a></li>
                                 </ul>
                             </li>
 

@@ -87,7 +87,7 @@
                         </li>
                         <li class="single-info-item">
                             <div class="title">
-                                {{ __('Contact us') }}
+                                {{ __('Contact') }}
                             </div>
                             <div class="details">
                                 {{ $footer->phone }} <br> {{ $footer->email }}
