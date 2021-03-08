@@ -7,7 +7,7 @@
                         <div class="header-inner">
                             <!-- header inner -->
                             <div class="icon">
-                                <img src="{{ asset('images/'.resizeImage($slider->image, 50, 20)) }}" alt="">
+                                <img src="{{ asset('images/'.resizeImage($slider->image, 1792, 1062)) }}" alt="">
                             </div>
                             <h1 class="title">
                                 @if(app()->getLocale() == "en") {{ $slider->title_en }} @else {{ $slider->title_ar }} @endif

@@ -2,7 +2,7 @@
     @extends('frontend.layouts.header')
     @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url({{asset('images/'.$pageSetting->image)}});">
+    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'.resizeImage($pageSetting->image, 1792, 510))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

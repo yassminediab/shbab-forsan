@@ -1,7 +1,7 @@
 @extends('frontend.layouts.header')
 @section('content')
     <!-- breadcrumb Area -->
-    <div class="breadcrumb-area" style="background-image:url({{asset('images/'.$pageSetting->image)}});">
+    <div class="breadcrumb-area" style="background-image:url({{ asset('images/'.resizeImage($pageSetting->image, 1792, 510))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -26,7 +26,7 @@
                 <div class="col-lg-8">
                     <div class="events-details-item">
                         <div class="thumb margin-bottom-20">
-                            <img src="{{ asset('images/'. $event->image) }}" alt="@if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif
+                            <img src="{{ asset('images/'.resizeImage($event->image, 730, 448))}}" alt="@if(app()->getLocale() == "en") {{ $event->title_en }} @else {{ $event->title_ar }} @endif
                             ">
                             <div class="post-time">
                                 <h5 class="title"> {{ $event->date->format('d') }}</h5>
