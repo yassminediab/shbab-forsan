@@ -46,10 +46,6 @@ if (!function_exists('resizeImage')) {
         $image = Image::make(public_path('images'). "/". $filename);
         $image->resize($width, $height);
         $image->save($newImage);
-<<<<<<< HEAD
-        return "cache/". $pathInfo['filename']. "_". $width . 'x' . $height . '.'. $pathInfo['extension'];
-=======
         return "cache/". $pathInfo['filename']. "_". $width . 'x' . $height.'.' . $pathInfo['extension'];
->>>>>>> ae41688249fd49b3b822ed9f3005050a0b9ad2ea
     }
 }
