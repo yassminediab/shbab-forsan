@@ -1,0 +1,116 @@
+.widget_subscribe .widget-title {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.contact_info_list li.single-info-item-02 .icon {
+    margin-right: 0;
+    margin-left: 15px;
+    transform: rotate(270deg);
+}
+.single-contact-item .icon{
+    margin-right: 0;
+    margin-left: 20px;
+    transform: rotate(270deg);
+}
+.single-contact-item .content .details {
+    margin-bottom: 0;
+}
+.single-contact-item {
+    align-items: center;
+}
+.navbar-area.nav-style-02 .nav-container .navbar-collapse .navbar-nav {
+    text-align: left;
+}
+.topbar-inner {
+    margin-left: 0;
+    margin-right: 300px;
+}
+.info-items li i {
+    margin-left: 3px;
+    margin-right: 0;
+}
+.topbar-inner .right-contnet .volunteer-right {
+    margin-left: 0;
+    margin-right: 50px;
+}
+.info-items-02 li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.info-items li + li {
+    margin-left: 0;
+    margin-right: 20px;
+}
+.navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu {
+    text-align: right;
+}
+.info-items-02 li.volunteer {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.progress-item .single-progressbar .progressbar {
+    height: 5px;
+}
+
+.progress-item .single-progressbar .progressbar .proggress{
+    position: absolute;
+    left: 0;
+}
+
+.contribute-single-item::before {
+    right: 0;
+    left: -40px;
+}
+.contribute-single-item::after {
+    right: -100px;
+    left: 0;
+}
+.blog-classic-item-01 .content-wrapper .news-date {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.widget .recent_post_item li.single-recent-post-item .thumb{
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.widget_search .search-form .form-group .form-control{
+    border-left: 0;
+    border-right: 2px solid var(--main-color-one);
+}
+
+
+.widget_search .search-form .submit-btn {
+    left: 0;
+    right: initial;
+}
+
+.widget.footer-widget .subscribe-form .submit-btn{
+    right: initial;
+    left: 0;
+    border-radius: 5px 0;
+}
+.owl-stage-outer{
+    position:relative;
+    overflow:hidden;
+    -webkit-transform:translate3d(0,0,0);
+    direction: ltr;
+}
+
+.volunteer-area .volunteer-title-content .section-title{
+    text-align: right;
+}
+
+.single-blog-grid-01 .content-wrapper .news-date{
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.about-area .about-title-content .section-title{
+    text-align: right;
+}
+
+.request-page-form .form-group .form-control{
+    text-align: right;
+}
