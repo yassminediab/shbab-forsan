@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+@if(app()->getLocale() == "en")
 <html lang="en">
+@else
+<html lang="ar" dir="rtl">
+@endif
 
 
 <!-- Mirrored from irtech.biz/tf/fundorex/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 22:13:56 GMT -->
@@ -11,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ __('Shabab Forsan') }}</title>
 
-        <!-- jquery -->
+    <!-- jquery -->
     <script src="{{ asset('frontend/assets/js/jquery-2.2.4.min.js') }}"></script>
     <!-- bootstrap -->
     <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
@@ -21,8 +25,6 @@
     <link rel=icon href={{ asset('images/'. $footer->logo) }} sizes="20x20" type="image/png">
     <!-- animate -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.css') }}">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
     <!-- magnific popup -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.css') }}">
     <!-- slick carousel  -->
@@ -33,10 +35,20 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/font-awesome.min.css') }}">
     <!-- flaticon -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
     <!-- responsive Stylesheet -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+    <!-- bootstrap -->
+    @if(app()->getLocale() == "en")
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+    @else
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.rtl.min.css') }}">
+    @endif
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
+    @if(app()->getLocale() == "ar")
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.rtl.css') }}">
+    @endif
+
 <style>
     .logo > img{
         width: 20px !important;
@@ -127,12 +139,12 @@
                                 <li><a href="{{ url('volunteer') }}">{{ __('Our Volunteer') }}</a></li>
                             </ul>
                         </li>
-                    
+
                         <li><a href="{{ url('events') }}">{{ __('Events') }}</a></li>
 
                         <li><a href="{{ url('blogs') }}">{{ __('Blogs') }}</a></li>
                         <li><a href="{{ url('cases') }}">{{ __('Cases') }}</a></li>
-                      
+
                         <li><a href="{{ url('contact') }}">{{ __('Contact') }}</a></li>
                         <li> <a href="{{ route('locale', $switchLanguage) }}">{{ __('frontend.language_switch') }}</a></li>
                     </ul>
@@ -159,5 +171,5 @@
         <!-- navbar area end -->
     </div>
     @yield('content')
- 
+
     @include('frontend.layouts.footer')

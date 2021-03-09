@@ -31,8 +31,8 @@
                             </div>
                             <div class="content-wrapper">
                                 <div class="news-date">
-                                    <h5 class="title"> {{ $blog->created_at->format('d') }}</h5>
-                                    <span> {{ $blog->created_at->format('F') }}</span>
+                                    <h5 class="title"> @if($blog->created_at) {{ $blog->created_at->format('d')}} @endif</h5>
+                                    <span> @if($blog->created_at) {{ $blog->created_at->format('F') }} @endif</span>
                                 </div>
                                 <div class="content">
                                     {{-- <ul class="post-meta">
@@ -100,7 +100,7 @@
                                         <h4 class="title"><a href="#">
                                             @if(app()->getLocale() == "en") {{ $recentPost->title_en }} @else {{ $recentPost->title_ar }} @endif
                                         </a></h4>
-                                        <span class="time"><i class="far fa-calendar-alt"></i> {{ $recentPost->created_at->format('d F Y') }}</span>
+                                        <span class="time"><i class="far fa-calendar-alt"></i>@if($recentPost->created_at) {{ $recentPost->created_at->format('d F Y') }} @endif</span>
                                     </div>
                                 </li>
                                @endforeach

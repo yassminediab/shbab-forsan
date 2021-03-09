@@ -33,6 +33,9 @@ if (!function_exists('editorContent')) {
 if (!function_exists('resizeImage')) {
     function resizeImage($filename, $width, $height)
     {
+        if(!$filename)
+            return "";
+
         $pathInfo = pathinfo($filename);
 
         $newImage = public_path('images/cache'). "/".  $pathInfo['filename']. "_". $width . 'x' . $height.'.' . $pathInfo['extension'];
