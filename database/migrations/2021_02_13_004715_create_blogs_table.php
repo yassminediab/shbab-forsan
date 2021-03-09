@@ -20,8 +20,8 @@ class CreateBlogsTable extends Migration
             $table->text('content_en');
             $table->text('content_ar');
             $table->string('image');
-            $table->foreignId('categories_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('tags_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('categories_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('tags_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@
     var table = $('.data-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('blogs.index') }}",
+        ajax: "{{ route('aboutSection.index') }}",
         columns: [
             {data: 'DT_RowIndex', orderable: false, searchable: false},
             {data: 'title_en'},

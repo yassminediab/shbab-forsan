@@ -19,7 +19,6 @@ class TestimonialSectionController extends Controller
                         $btn = '
                            <ul class="list-inline">
                                 <li><a class="btn btn-primary btn-icon" href="' . url('admin/testimonial/section/edit/' . $row->id) . '"><i class="icon-pencil7"></i></a></li>
-                                <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->title_en .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/testimonial/section/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
     
                         return $btn;

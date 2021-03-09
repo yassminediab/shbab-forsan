@@ -48,7 +48,7 @@ class HomePageSeeder extends Seeder
         ]);
 
         AboutUsSection::create([
-             'title_ar' => 'title ',
+            'title_ar' => 'title ',
             'title_en' => 'title ',
             'content_ar' => 'ناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القاأو شكل توضع الام طريقة لوريم إيبسوم ',
             'content_en' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
