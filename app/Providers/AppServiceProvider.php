@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('*', FooterComposer::class);
+        View::composer('frontend.layouts.header', FooterComposer::class);
     }
 }
