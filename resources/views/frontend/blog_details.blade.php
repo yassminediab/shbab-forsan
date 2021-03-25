@@ -68,7 +68,7 @@
                                 @foreach($recentPosts as $recentPost)
                                 <li class="single-recent-post-item">
                                     <div class="thumb">
-                                        <img src="{{ asset('images/'. $recentPost->image) }}" alt="@if(app()->getLocale() == "en") {{ $recentPost->title_en }} @else {{ $recentPost->title_ar }} @endif
+                                        <img src="{{ asset('images/'.resizeImage($slider->image, 360, 232)) }}" alt="@if(app()->getLocale() == "en") {{ $recentPost->title_en }} @else {{ $recentPost->title_ar }} @endif
                                         ">
                                     </div>
                                     <div class="content">

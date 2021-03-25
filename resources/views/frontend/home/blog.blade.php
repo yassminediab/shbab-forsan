@@ -16,7 +16,7 @@
             <div class="col-lg-6 col-xl-4">
                 <div class="single-blog-grid-01 margin-bottom-30">
                     <div class="thumb">
-                        <img src="{{ asset('images/cache/'.explode('.',$blog->image)[0]. '_50x20.' . explode('.',$blog->image)[1] ) }}" alt="blog image">
+                        <img src="{{ asset('images/'.resizeImage($slider->image, 360, 232)) }}" alt="blog image">
                     </div>
                     <div class="content-wrapper">
                         <div class="news-date">

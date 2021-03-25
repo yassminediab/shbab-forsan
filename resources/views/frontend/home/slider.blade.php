@@ -1,6 +1,6 @@
 <div class="header-slider-one">
     @foreach($sliders as $slider)
-        <div class="header-area header-bg" style="background: url({{ asset('images/cache/'.explode('.',$slider->image)[0]. '_50x20.' . explode('.',$slider->image)[1] ) }}) cover center center">
+        <div class="header-area header-bg" style="background: url({{ asset('images/'.resizeImage($slider->image, 1972, 510)) }}) cover center center">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
