@@ -57,6 +57,39 @@
         background-color: #019e43 !important;
         color: #fff;
     }
+
+    .topbar-area {
+    background-color: #019e43 !important;
+}
+.bg-black {
+    background-color: #019e43 !important;
+}
+
+.widget.footer-widget p, .footer-widget.widget_tag_cloud .tagcloud a, .widget.footer-widget.widget_calendar caption, .widget.footer-widget.widget_calendar th, .widget.footer-widget.widget_calendar td{
+    color: #fff !important;
+}
+
+.contact_info_list li.single-info-item .details {
+    color: #fff !important;
+}
+
+.copyright-area .copyright-area-inner {
+    color: #fff !important;
+}
+
+.widget.footer-widget ul li a, .widget.footer-widget ul li{
+      color: #fff !important;
+}
+
+.copyright-area {
+    background-color: #019e43 !important;
+}
+.header-area.header-bg::before{
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0.28) 0%, #019e437a 100%);!important;
+}
+.breadcrumb-area:before{
+    background: linear-gradient(360deg, #019e43d1 0%, #019e4359 100%); !important;
+}
     </style>
 </head>
 

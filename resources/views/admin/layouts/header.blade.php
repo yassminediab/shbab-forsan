@@ -148,7 +148,7 @@
                                         <a href="#"><i class="icon-wrench3"></i> <span>Sections Setting</span></a>
                                         <ul>
                                             <li><a href="{{ url('admin/problem/section') }}">View problem section</a></li>
-                                            <li><a href="{{ url('admin/testimonial/section') }}">View Tistimonial Section</a></li>
+                                            <li><a href="{{ url('admin/testimonial/section') }}">View Review Section</a></li>
                                             <li><a href="{{ url('admin/case/section') }}">View Cases Section</a></li>
                                             <li><a href="{{ url('admin/blog/section') }}">View Blogs Section</a></li>
                                             <li><a href="{{ url('admin/aboutSection') }}">View About Section</a></li>
@@ -160,7 +160,7 @@
                                     <li><a href="{{ url('admin/area/section') }}">View Area Section</a></li>
                                     <li><a href="{{ url('admin/number') }}">View Numbers Section</a></li>
                                     <li><a href="{{ url('admin/problems') }}">View Problem</a></li>
-                                    <li><a href="{{ url('admin/testimonials') }}">View Tistimonial</a></li>
+                                    <li><a href="{{ url('admin/testimonials') }}">View reviews</a></li>
                                 </ul>
                             </li>
 

@@ -23,10 +23,10 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-single-item">
                         <div class="thumb">
-                            <img src="{{ asset($volunteer->image) }}" alt="">
+                            <img src="{{ asset('images/'.$volunteer->image) }}" alt="">
                             <div class="content">
                                 <h4 class="title">
-                                    @if(app()->getLocale() == "en") {{ $volunteer->title_en }} @else {{ $volunteer->title_ar }} @endif
+                                     {{ $volunteer->name }} 
                                 </h4>
                                 {{-- <div class="social-link">
                                     <ul>

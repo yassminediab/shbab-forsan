@@ -106,7 +106,7 @@
                                     <option @if($problem->icon == 'fa-archive')selected @endif value='fa-archive'>&#xf187; fa-archive</option>
                                     <option @if($problem->icon == 'fa-area-chart')selected @endif value='fa-area-chart'>&#xf1fe; fa-area-chart</option>
                                     <option @if($problem->icon == 'fa-arrow-circle-dow')selected @endif value='fa-arrow-circle-down'>&#xf0ab; fa-arrow-circle-down</option>
-                                    <option  @if($problem->icon == 'fa-arrow-circle-left')selected @endifvalue='fa-arrow-circle-left'>&#xf0a8; fa-arrow-circle-left</option>
+                                    <option  @if($problem->icon == 'fa-arrow-circle-left')selected @endif value='fa-arrow-circle-left'>&#xf0a8; fa-arrow-circle-left</option>
                                     <option @if($problem->icon == 'fa-arrow-circle-o-down')selected @endif value='fa-arrow-circle-o-down'>&#xf01a; fa-arrow-circle-o-down</option>
                                     <option @if($problem->icon == 'fa-arrow-circle-o-left')selected @endif value='fa-arrow-circle-o-left'>&#xf190; fa-arrow-circle-o-left</option>
                                     <option @if($problem->icon == 'fa-arrow-circle-o-right')selected @endif value='fa-arrow-circle-o-right'>&#xf18e; fa-arrow-circle-o-right</option>

@@ -18,7 +18,7 @@ class VolunteerController extends Controller
                     ->addColumn('action', function ($row) {
                         $btn = '
                            <ul class="list-inline">
-                                <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->name .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/categories/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
+                                <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->name .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/volunteers/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
     
                         return $btn;
