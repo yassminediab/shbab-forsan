@@ -138,7 +138,6 @@
                                 </div>
                                 <div class="volunteer-right">
                                     <ul class="info-items-02">
-                                        <li><a href="{{ url('volunteer') }}"><i class="flaticon-heart"></i>{{ __('Want to work with us ?') }}</a></li>
                                         <li class="volunteer"><a href="{{ url('volunteer')}}"> {{ __('Become a Volunteer')  }}</a></li>
                                     </ul>
                                 </div>
