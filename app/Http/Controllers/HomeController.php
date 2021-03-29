@@ -35,7 +35,7 @@ class HomeController extends Controller
             'cases' => CaseModel::limit(3)->latest()->get(),
             'video' => Video::first(),
             'problemSection' => ProblemSection::first(),
-            'problems' => Problem::limit(3)->get(),
+            'problems' => Problem::limit(4)->get(),
             'volunteerSection' => VolunteerSection::first(),
             'volunteers' => Volunteer::limit(3)->get(),
             'blogs' => Blog::limit(3)->get(),

@@ -7,7 +7,9 @@
 
 
 <!-- Mirrored from irtech.biz/tf/fundorex/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 22:13:56 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,47 +51,63 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.rtl.css') }}">
     @endif
 
-<style>
-    .logo > img{
-        width: 20px !important;
-    }
-    .blog-pagination ul li span.current, .blog-pagination ul li a:hover {
-        background-color: #019e43 !important;
-        color: #fff;
-    }
+    <style>
+        .logo>img {
+            width: 20px !important;
+        }
 
-    .topbar-area {
-    background-color: #019e43 !important;
-}
-.bg-black {
-    background-color: #019e43 !important;
-}
+        .blog-pagination ul li span.current,
+        .blog-pagination ul li a:hover {
+            background-color: #019e43 !important;
+            color: #fff;
+        }
 
-.widget.footer-widget p, .footer-widget.widget_tag_cloud .tagcloud a, .widget.footer-widget.widget_calendar caption, .widget.footer-widget.widget_calendar th, .widget.footer-widget.widget_calendar td{
-    color: #fff !important;
-}
+        .topbar-area {
+            background-color: #019e43 !important;
+        }
 
-.contact_info_list li.single-info-item .details {
-    color: #fff !important;
-}
+        .bg-black {
+            background-color: #019e43 !important;
+        }
 
-.copyright-area .copyright-area-inner {
-    color: #fff !important;
-}
+        .widget.footer-widget p,
+        .footer-widget.widget_tag_cloud .tagcloud a,
+        .widget.footer-widget.widget_calendar caption,
+        .widget.footer-widget.widget_calendar th,
+        .widget.footer-widget.widget_calendar td {
+            color: #fff !important;
+        }
 
-.widget.footer-widget ul li a, .widget.footer-widget ul li{
-      color: #fff !important;
-}
+        .contact_info_list li.single-info-item .details {
+            color: #fff !important;
+        }
 
-.copyright-area {
-    background-color: #019e43 !important;
-}
-.header-area.header-bg::before{
-    background: linear-gradient(360deg, rgba(255, 255, 255, 0.28) 0%, #019e437a 100%);!important;
-}
-.breadcrumb-area:before{
-    background: linear-gradient(360deg, #019e43d1 0%, #019e4359 100%); !important;
-}
+        .copyright-area .copyright-area-inner {
+            color: #fff !important;
+        }
+
+        .widget.footer-widget ul li a,
+        .widget.footer-widget ul li {
+            color: #fff !important;
+        }
+
+        .copyright-area {
+            background-color: #019e43 !important;
+        }
+
+        .header-area.header-bg::before {
+            background: linear-gradient(360deg, rgba(255, 255, 255, 0.28) 0%, #019e437a 100%);
+             !important;
+        }
+
+        .breadcrumb-area:before {
+            background: linear-gradient(360deg, #019e43d1 0%, #019e4359 100%);
+             !important;
+        }
+
+        .padding-bottom-85 {
+            padding-bottom: -23px !important;
+        }
     </style>
 </head>
 
@@ -125,20 +143,23 @@
                             <div class="left-contnet">
                                 <ul class="info-items">
                                     <li><a href="#"><i class="flaticon-call"></i>{{ $footer->phone }}</a></li>
-                                    <li><a href="mailto:{{ $footer->email }}"><i class="far fa-envelope-open"></i>{{ $footer->email }}</a></li>
+                                    <li><a href="mailto:{{ $footer->email }}"><i class="far fa-envelope-open"></i>{{
+                                            $footer->email }}</a></li>
                                 </ul>
                             </div>
                             <div class="right-contnet">
                                 <div class="social-link">
                                     <ul>
                                         @foreach($socialMedias as $socialMedia)
-                                            <li><a href="{{ $socialMedia->url }}"><i class="far fa-{{ $socialMedia->platform }}"></i></a></li>
+                                        <li><a href="{{ $socialMedia->url }}"><i
+                                                    class="far fa-{{ $socialMedia->platform }}"></i></a></li>
                                         @endforeach
                                     </ul>
                                 </div>
                                 <div class="volunteer-right">
                                     <ul class="info-items-02">
-                                        <li class="volunteer"><a href="{{ url('volunteer')}}"> {{ __('Become a Volunteer')  }}</a></li>
+                                        <li class="volunteer"><a href="{{ url('volunteer')}}"> {{ __('Become a
+                                                Volunteer') }}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -156,13 +177,14 @@
                             <img src="{{ asset('images/'.$footer->logo) }}" alt="">
                         </a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
                     <ul class="navbar-nav">
-                         <li><a href="{{ url('/') }}">{{ __('Home') }}</a></li>
+                        <li style="margin-left:15px"><a href="{{ url('/') }}">{{ __('Home') }}</a></li>
 
                         <li class="menu-item-has-children">
                             <a href="#">{{ __('Pages') }}</a>
@@ -178,7 +200,8 @@
                         <li><a href="{{ url('cases') }}">{{ __('Cases') }}</a></li>
 
                         <li><a href="{{ url('contact') }}">{{ __('Contact') }}</a></li>
-                        <li> <a href="{{ route('locale', $switchLanguage) }}">{{ __('frontend.language_switch') }}</a></li>
+                        <li> <a href="{{ route('locale', $switchLanguage) }}">{{ __('frontend.language_switch') }}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="nav-right-content">
