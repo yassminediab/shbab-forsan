@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}">
     <!-- responsive Stylesheet -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     @if(app()->getLocale() == "en")
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
@@ -50,6 +53,9 @@
     @endif
 
 <style>
+    html, body, h1, h2, h3, h4, h5, h6, p, span, div, section, nav, li, a {
+        font-family: 'Tajawal', sans-serif !important;
+    }
     .logo > img{
         width: 20px !important;
     }
