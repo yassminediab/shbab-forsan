@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             @foreach($problems as $problem)
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-6 col-md-6">
                 <div class="problem-single-item margin-bottom-30">
                     <div class="icon">
                         <i class="fa {{ $problem->icon }}"></i>
@@ -27,7 +27,7 @@
                         <p>
                             @if(app()->getLocale() == "en") {{ \Str::limit(Strip_tags($problem->content_en), $limit = 80, $end = '...')  }}
                                 @else {{ \Str::limit(Strip_tags($problem->content_ar), $limit = 80, $end = '...')  }}
-                            @endif 
+                            @endif
                         </p>
                     </div>
                 </div>
