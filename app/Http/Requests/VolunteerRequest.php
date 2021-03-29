@@ -29,6 +29,7 @@ class VolunteerRequest extends FormRequest
             'phone' => 'required',
             'address' => 'required',
             'message' => 'required',
+            'file' => 'required'
         ];
     }
 }

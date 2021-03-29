@@ -54,12 +54,12 @@
                     <div class="widget-nav-form">
                         @include('frontend.layouts.success_message')
                         <form action="{{ route('volunteer.store') }}" class="request-page-form" novalidate="novalidate"
-                            method="post">
+                            method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="email" name="name" placeholder="Full Name" class="form-control"
+                                        <input type="text" name="name" placeholder="Full Name" class="form-control"
                                             required="" aria-required="true">
                                     </div>
                                 </div>
@@ -89,8 +89,8 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="file" name="image" placeholder="Image" class="form-control"
-                                            required="" aria-required="true">
+                                        <input type="file" name="file" placeholder="Image" class="form-control" required
+                                            aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">

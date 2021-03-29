@@ -23,7 +23,18 @@ class VolunteerController extends Controller
 
     public function store(VolunteerRequest $request)
     {
-        Volunteer::create($request->except('_token'));
+        $imageName = time().'.'.request()->file->getClientOriginalExtension();
+        request()->file->move(public_path('images'), $imageName);
+        $request['image'] = $imageName;
+
+        Volunteer::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'message' => $request->message,
+            'image' => $imageName,
+        ]);
 
         return redirect('/volunteer')->with('success', 'sent Successfully');
     }

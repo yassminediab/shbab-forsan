@@ -39,6 +39,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}">
     <!-- responsive Stylesheet -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     @if(app()->getLocale() == "en")
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
@@ -107,6 +110,77 @@
 
         .padding-bottom-85 {
             padding-bottom: -23px !important;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span,
+        div,
+        section,
+        nav,
+        li,
+        a {
+            font-family: 'Tajawal', sans-serif !important;
+        }
+
+        .logo>img {
+            width: 20px !important;
+        }
+
+        .blog-pagination ul li span.current,
+        .blog-pagination ul li a:hover {
+            background-color: #019e43 !important;
+            color: #fff;
+        }
+
+        .topbar-area {
+            background-color: #019e43 !important;
+        }
+
+        .bg-black {
+            background-color: #019e43 !important;
+        }
+
+        .widget.footer-widget p,
+        .footer-widget.widget_tag_cloud .tagcloud a,
+        .widget.footer-widget.widget_calendar caption,
+        .widget.footer-widget.widget_calendar th,
+        .widget.footer-widget.widget_calendar td {
+            color: #fff !important;
+        }
+
+        .contact_info_list li.single-info-item .details {
+            color: #fff !important;
+        }
+
+        .copyright-area .copyright-area-inner {
+            color: #fff !important;
+        }
+
+        .widget.footer-widget ul li a,
+        .widget.footer-widget ul li {
+            color: #fff !important;
+        }
+
+        .copyright-area {
+            background-color: #019e43 !important;
+        }
+
+        .header-area.header-bg::before {
+            background: linear-gradient(360deg, rgba(255, 255, 255, 0.28) 0%, #019e437a 100%);
+             !important;
+        }
+
+        .breadcrumb-area:before {
+            background: linear-gradient(360deg, #019e43d1 0%, #019e4359 100%);
+             !important;
         }
     </style>
 </head>

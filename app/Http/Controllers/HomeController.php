@@ -37,7 +37,7 @@ class HomeController extends Controller
             'problemSection' => ProblemSection::first(),
             'problems' => Problem::limit(4)->get(),
             'volunteerSection' => VolunteerSection::first(),
-            'volunteers' => Volunteer::limit(3)->get(),
+            'volunteers' => Volunteer::limit(4)->get(),
             'blogs' => Blog::limit(3)->get(),
             'blogSection' => BlogSection::first(),
             'events' => Event::limit(4)->get(),
