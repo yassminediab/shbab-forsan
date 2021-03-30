@@ -12,7 +12,7 @@
                     </div>
                     <div class="section-paragraph">
                         <P>
-                            @if(app()->getLocale() == "en") {!! $volunteerSection->content_en !!} @else {!! $volunteerSection->content_ar !!} @endif 
+                            @if(app()->getLocale() == "en") {!! $volunteerSection->content_en !!} @else {!! $volunteerSection->content_ar !!} @endif
                         </P>
                     </div>
                 </div>
@@ -23,10 +23,10 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-single-item">
                         <div class="thumb">
-                            <img src="{{ asset('images/'.$volunteer->image) }}" alt="">
+                            <img src="{{ asset('images/'.resizeImage($volunteer->image, 681, 722)) }}" alt="">
                             <div class="content">
                                 <h4 class="title">
-                                     {{ $volunteer->name }} 
+                                     {{ $volunteer->name }}
                                 </h4>
                                 {{-- <div class="social-link">
                                     <ul>
