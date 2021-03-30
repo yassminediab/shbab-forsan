@@ -2,8 +2,8 @@
     @foreach($sliders as $slider)
         <div class="header-area header-bg" style="background-image: url({{ asset('images/'.resizeImage($slider->image, 1972, 510)) }}); background-repeat: no-repeat; background-position: center center">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
+                <div @if(app()->getLocale() == "en") class="row" @else class="row justify-content-end" @endif>
+                    <div @if(app()->getLocale() == "en") class="col-lg-6" @else class="col-lg-6 col-lg-offset-8" @endif>
                         <div class="header-inner">
                             <!-- header inner -->
                             <h1 class="title">
