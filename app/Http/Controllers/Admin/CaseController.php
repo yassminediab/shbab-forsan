@@ -69,7 +69,7 @@ class CaseController extends Controller
     {
         $case = Model::find($id);
 
-        return view('admin.blogs.edit', [
+        return view('admin.cases.edit', [
             'case' => $case,
         ]);
     }

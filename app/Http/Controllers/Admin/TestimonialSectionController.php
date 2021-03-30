@@ -59,7 +59,7 @@ class TestimonialSectionController extends Controller
 
     public function edit($id)
     {
-        $testimonialSection = Blog::find($id);
+        $testimonialSection = Model::find($id);
 
         return view('admin.testimonialSection.edit', [
             'testimonialSection' => $testimonialSection,
@@ -70,11 +70,6 @@ class TestimonialSectionController extends Controller
     {
         $data = [];
         $data = $request->except('_token');
-
-        $data['content_ar'] = editorContent($request->content_ar);
-
-        $data['content_en'] = editorContent($request->content_en);
-
         
         Model::where('id', $request->id)->update($data);
         return redirect('/admin/testimonial/section')->with('success', 'updated Successfully!');

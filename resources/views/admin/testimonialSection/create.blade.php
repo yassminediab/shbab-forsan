@@ -17,9 +17,10 @@
         </div>
 
         <div class="panel-body">
-            <form class="form-horizontal" action="{{ url('admin/testimonial/section/store') }}" method="post"  enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url('admin/testimonial/section/store') }}" method="post"
+                enctype="multipart/form-data">
                 {{ csrf_field() }}
-                
+
                 <ul class="nav nav-tabs nav-tabs-highlight">
                     <li class="active"><a href="#general-tab" data-toggle="tab">General</a></li>
                 </ul>
@@ -27,8 +28,10 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="general-tab">
                         <ul class="nav nav-tabs nav-tabs-highlight">
-                            <li class="active"><a href="#arabic-tab" data-toggle="tab"><img src="{{ asset('assets/img/flags/ar.png') }}"> Arabic</a></li>
-                            <li><a href="#english-tab" data-toggle="tab"><img src="{{ asset('assets/img/flags/en.png') }}"> English</span></a></li>
+                            <li class="active"><a href="#arabic-tab" data-toggle="tab"><img
+                                        src="{{ asset('assets/img/flags/ar.png') }}"> Arabic</a></li>
+                            <li><a href="#english-tab" data-toggle="tab"><img
+                                        src="{{ asset('assets/img/flags/en.png') }}"> English</span></a></li>
                         </ul>
 
                         <div class="tab-content">
@@ -36,33 +39,20 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Title (Ar)</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" name="title_ar" placeholder="enter title" required value="{{ old('title_ar') }}">
+                                        <input type="text" class="form-control" name="title_ar"
+                                            placeholder="enter title" required value="{{ old('title_ar') }}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label col-lg-2">Content (Ar)</label>
-                                    <div class="col-lg-10">
-                                        <textarea type="text" rows="5" cols="5" class="summernote form-control" required name="content_ar" placeholder="enter description">
-                                            {{ old('content_ar') }}
-                                        </textarea>
-                                    </div>
-                                </div>
+
                             </div>
-                         
+
 
                             <div class="tab-pane" id="english-tab">
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Title (En)</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" name="title_en" placeholder="enter title" required value="{{ old('title_en') }}">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-lg-2">Content (En)</label>
-                                    <div class="col-lg-10">
-                                        <textarea type="text" rows="5" cols="5" class="summernote form-control" required name="content_en" placeholder="enter description">
-                                            {{ old('content_en') }}
-                                        </textarea>
+                                        <input type="text" class="form-control" name="title_en"
+                                            placeholder="enter title" required value="{{ old('title_en') }}">
                                     </div>
                                 </div>
                             </div>
@@ -71,18 +61,19 @@
 
                 </div>
 
-              
+
                 <div class="text-right">
-                    <button type="submit" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
+                    <button type="submit" class="btn btn-primary">Submit <i
+                            class="icon-arrow-right14 position-right"></i></button>
                 </div>
             </form>
         </div>
     </div>
     <!-- /form horizontal -->
 
-@include('admin.layouts.footer')
-      
+    @include('admin.layouts.footer')
+
 
 </div>
 <!-- /content area -->
-  @endsection
+@endsection
