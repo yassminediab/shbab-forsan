@@ -131,7 +131,7 @@
                                 </ul>
                             </li>
 
-                            
+
 
                             <li>
                                 <a href="#"><i class="icon-cube3"></i> <span>Pages</span></a>
@@ -153,6 +153,7 @@
                                             <li><a href="{{ url('admin/blog/section') }}">View Blogs Section</a></li>
                                             <li><a href="{{ url('admin/aboutSection') }}">View About Section</a></li>
                                             <li><a href="{{ url('admin/video') }}">View Video Section</a></li>
+                                            <li><a href="{{ url('admin/event/section') }}">View Event Section</a></li>
                                         </ul>
                                     </li>
 

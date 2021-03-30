@@ -25,7 +25,8 @@
                <div class="col-lg-3 col-sm-6">
                    <div class="team-single-item">
                        <div class="thumb">
-                           <img src="{{ asset('images/'.$volunteer->image) }}" alt="{{ $volunteer->name }}">
+                           <img src="{{ asset('images/'.resizeImage($volunteer->image, 681, 722)) }}"
+                               alt="{{ $volunteer->name }}">
                            <div class="content">
                                <h4 class="title">
                                    {{ $volunteer->name }}
