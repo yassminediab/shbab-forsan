@@ -1,6 +1,6 @@
    @if(! empty($problemSection))
    <!-- Follow Problem -->
-   <section class="problem-area padding-top-90">
+   <section class="problem-area padding-top-90 padding-bottom-85">
        <div class="container">
            <div class="row justify-content-center">
                <div class="col-lg-8 col-sm-11 col-11">
@@ -14,7 +14,7 @@
            </div>
            <div class="row">
                @foreach($problems as $problem)
-               <div class="col-lg-4 col-md-6">
+               <div class="col-lg-6 col-md-6">
                    <div class="problem-single-item margin-bottom-30">
                        <div class="icon">
                            <i class="fa {{ $problem->icon }}"></i>

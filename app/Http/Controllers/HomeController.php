@@ -30,7 +30,7 @@ class HomeController extends Controller
         return view('frontend.index', [
             'sliders' => Slider::all(),
             'about' => AboutUsSection::first(),
-            'areas' => AreaSection::limit(6)->get(),
+            'areas' => AreaSection::limit(3)->get(),
             'caseSection' => CaseSection::first(),
             'cases' => CaseModel::limit(3)->latest()->get(),
             'video' => Video::first(),

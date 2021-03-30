@@ -232,8 +232,8 @@
                                 </div>
                                 <div class="volunteer-right">
                                     <ul class="info-items-02">
-                                        <li class="volunteer"><a href="{{ url('volunteer')}}"> {{ __('Become a
-                                                Volunteer') }}</a></li>
+                                        <li class="volunteer"><a href="{{ url('volunteer')}}">
+                                                {{ __('Become a Volunteer') }}</a></li>
                                     </ul>
                                 </div>
                             </div>
