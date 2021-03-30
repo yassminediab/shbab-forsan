@@ -47,8 +47,8 @@
                                 </h3>
                                 <p>
 
-                                    @if(app()->getLocale() == "en")   {{ \Str::limit(Strip_tags($case->content_en), $limit = 50, $end = '...')  }}
-                                     @else  {{ \Str::limit(Strip_tags($case->content_ar), $limit = 50, $end = '...')  }}  @endif
+                                    @if(app()->getLocale() == "en")   {!! \Str::limit(Strip_tags($case->content_en), $limit = 50, $end = '...')  !!}
+                                     @else  {!! \Str::limit(Strip_tags($case->content_ar), $limit = 50, $end = '...')  !!}  @endif
                                 </p>
                                 <div class="btn-wrapper">
                                     <a href="{{ url('cases/'. $case->id) }}" class="boxed-btn">
