@@ -14,22 +14,22 @@
            </div>
            <div class="row">
                @foreach($problems as $problem)
-               <div class="col-lg-6 col-md-6">
+               <div class="col-lg-3 col-md-3">
                    <div class="problem-single-item margin-bottom-30">
                        <div class="icon">
-                           <i class="fa {{ $problem->icon }}"></i>
+                           <img src="{{ asset('images/'.resizeImage($problem->icon, 100, 100))}}">
                        </div>
                        <div class="content">
-                           <h4 class="title">
-                               <a href="#">
+                           <h2 class="title" style="margin-top: 20px;font-size: 27px;">
+                               <a href="{{ $problem->url }}">
                                    @if(app()->getLocale() == "en") {{ $problem->title_en }} @else {{ $problem->title_ar
                                    }} @endif
                                </a>
-                           </h4>
+                           </h2>
                            <p>
-                               @if(app()->getLocale() == "en") {{ \Str::limit(Strip_tags($problem->content_en), $limit =
-                               80, $end = '...') }}
-                               @else {{ \Str::limit(Strip_tags($problem->content_ar), $limit = 80, $end = '...') }}
+                               @if(app()->getLocale() == "en") {!! \Str::limit(Strip_tags($problem->content_en), $limit =
+                               300, $end = '...') !!}
+                               @else {!! \Str::limit(Strip_tags($problem->content_ar), $limit = 300, $end = '...') !!}
                                @endif
                            </p>
                        </div>

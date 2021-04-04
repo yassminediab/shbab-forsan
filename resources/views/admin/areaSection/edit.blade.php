@@ -865,6 +865,13 @@
                                     <option value='fa-youtube-square'>&#xf166; fa-youtube-square</option>
                                 </select>                            </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-2">Url</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name="url" placeholder="enter url"  value="{{ $areaSection->url }}">
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 

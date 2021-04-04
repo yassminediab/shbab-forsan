@@ -44,6 +44,10 @@ class ProblemController extends Controller
 
     public function store(Request $request)
     {
+        $imageName = time().'.'.request()->file->getClientOriginalExtension();
+        request()->file->move(public_path('images'), $imageName);
+        $request['icon'] = $imageName;
+
         $request->content_ar = editorContent($request->content_ar);
 
         $request->content_en = editorContent($request->content_en);
@@ -53,7 +57,8 @@ class ProblemController extends Controller
             'title_en' => $request->title_en,
             'content_en' => $request->content_en,
             'content_ar' => $request->content_ar,
-            'icon' => $request->icon,
+            'icon' => $imageName,
+            'url' => $request->url
         ]);
 
         return redirect('/admin/problems')->with('success', 'created Successfully!');
@@ -71,11 +76,19 @@ class ProblemController extends Controller
     public function update(Request $request)
     {
         $data = [];
-        $data = $request->except('_token');
+        $data = $request->except('_token', 'file', 'files');
+        if ($request->file) {
+            $imageName = time().'.'.request()->file->getClientOriginalExtension();
+            request()->file->move(public_path('images'), $imageName);
+            $data['icon'] = $imageName;
+        }
 
         $data['content_ar'] = editorContent($request->content_ar);
 
         $data['content_en'] = editorContent($request->content_en);
+
+
+        Model::where('id', $request->id)->update($data);
 
         
         Model::where('id', $request->id)->update($data);

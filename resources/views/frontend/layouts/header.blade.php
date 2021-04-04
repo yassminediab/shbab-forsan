@@ -27,6 +27,12 @@
     <link rel=icon href={{ asset('images/'. $footer->logo) }} sizes="20x20" type="image/png">
     <!-- animate -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.css') }}">
+    <!-- bootstrap -->
+    @if(app()->getLocale() == "en")
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+    @else
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.rtl.min.css') }}">
+    @endif
     <!-- magnific popup -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.css') }}">
     <!-- slick carousel  -->
@@ -37,28 +43,21 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/font-awesome.min.css') }}">
     <!-- flaticon -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}">
-    <!-- responsive Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
-    <!-- bootstrap -->
-    @if(app()->getLocale() == "en")
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
-    @else
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.rtl.min.css') }}">
-    @endif
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
     @if(app()->getLocale() == "ar")
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.rtl.css') }}">
     @endif
 
-    <style>
-        .logo>img {
-            width: 20px !important;
-        }
+    <!-- responsive Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/new-curosal/curosal.css') }}">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    
+    
+    <style>
         .blog-pagination ul li span.current,
         .blog-pagination ul li a:hover {
             background-color: #019e43 !important;
@@ -130,10 +129,6 @@
             font-family: 'Tajawal', sans-serif !important;
         }
 
-        .logo>img {
-            width: 20px !important;
-        }
-
         .blog-pagination ul li span.current,
         .blog-pagination ul li a:hover {
             background-color: #019e43 !important;
@@ -181,6 +176,18 @@
         .breadcrumb-area:before {
             background: linear-gradient(360deg, #019e43d1 0%, #019e4359 100%);
              !important;
+        }
+        .header-bottom-area{
+            background-image: url(images/02.png) !important;
+        }
+        .problem-area{
+            background-image: url(images/02.png) !important;
+        }
+        .blog-area {
+            background-image: url(images/02.png) !important;
+        }
+        .carosal{
+            background-image: url(images/02.png) !important;
         }
     </style>
 </head>
@@ -248,7 +255,7 @@
                 <div class="responsive-mobile-menu">
                     <div class="logo-wrapper">
                         <a href="{{ url('/') }}" class="logo">
-                            <img src="{{ asset('images/'.$footer->logo) }}" alt="">
+                            <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt="">
                         </a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"

@@ -7,7 +7,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget">
                             <div class="about_us_widget">
-                                <a href="" class="footer-logo"> <img src="{{ asset('images/'.$footer->logo) }}" alt="footer logo"></a>
+                                <a href="" class="footer-logo"> <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt="footer logo"></a>
                             </div>
                         </div>
                     </div>
@@ -134,6 +134,9 @@
 <!-- Progress-Bar Active js -->
 <!-- main js -->
 <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+<script src="{{ asset('frontend/assets/js/carosal/carosal.js') }}"></script>
+
 </body>
 
 

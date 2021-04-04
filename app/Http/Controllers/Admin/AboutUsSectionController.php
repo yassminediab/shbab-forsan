@@ -45,7 +45,20 @@ class AboutUsSectionController extends Controller
 
     public function store(Request $request)
     {
-        Model::create($request->all());
+        $imageName = time().'.'.request()->file->getClientOriginalExtension();
+        request()->file->move(public_path('images'), $imageName);
+        $request['image'] = $imageName;
+ 
+        $request->content_ar = editorContent($request->content_ar);
+
+        $request->content_en = editorContent($request->content_en);
+
+        Model::create([
+            'title_ar' => $request->title_ar,
+            'title_en' => $request->title_en,
+            'content_en' => $request->content_en,
+            'image' => $imageName,
+        ]);
         
         return redirect('/admin/aboutSection')->with('success', 'created Successfully!');
     }
@@ -61,8 +74,19 @@ class AboutUsSectionController extends Controller
 
     public function update(Request $request)
     {
-        $data = $request->except('_token');
+        $data = [];
+        $data = $request->except('_token', 'file', 'files');
+        if ($request->file) {
+            $imageName = time().'.'.request()->file->getClientOriginalExtension();
+            request()->file->move(public_path('images'), $imageName);
+            $data['image'] = $imageName;
+        }
 
+        $data['content_ar'] = editorContent($request->content_ar);
+
+        $data['content_en'] = editorContent($request->content_en);
+
+        
         Model::where('id', $request->id)->update($data);
 
         return redirect('/admin/aboutSection')->with('success', 'updated Successfully!');

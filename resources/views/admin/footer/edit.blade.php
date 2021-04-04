@@ -93,9 +93,9 @@
                     </div>
                     <div class="tab-pane" id="data-tab">
                         <div class="form-group">
-                            <label class="control-label col-lg-2">{{ __('logo') }}</label>
+                            <label class="control-label col-lg-2">logo </label>
                             <div class="col-lg-10">
-                                <img src="{{ asset('images/'. $footer->logo) }}" width="100px" />
+                                <img src="{{ asset('images/'.resizeImage($footer->logo, 989, 989))}}" width="100px" />
                                 <input type="file" class="form-control file-styled" name="file">
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                 @foreach ($footer->main_links as $key => $link)
                                     
                                     <div id="another-participant{{ $key }}" class="form-group row-index">
-                                        <label class="control-label col-lg-2 row-index">{{ __('Add Main Links') }}</label>
+                                        <label class="control-label col-lg-2 row-index"> Add Main Links </label>
                                         <div class="col-lg-10">
                                             <input type="text" class="form-control row-index" value="{{ $link['name_en'] }}" name="main_links[{{ $key }}][name_en]" placeholder="Name (en)"/>
                                             <input type="text" class="form-control row-index" value="{{ $link['name_ar'] }}" name="main_links[{{ $key }}][name_ar]" placeholder="Name (ar)"/>
@@ -134,7 +134,7 @@
                             </div>
                             
                             <div class="text-left">
-                                <button class="btn btn-primary" type="button" id="addMainLinks">+{{ __('Add Main Links') }}</button>
+                                <button class="btn btn-primary" type="button" id="addMainLinks">+ Add Main Links </button>
                             </div>
                         </div>
                        <!-- what we do -->
@@ -142,7 +142,7 @@
                             @foreach ($footer->we_do as $key => $link)
                                 <div id="what-we-d0-links" > 
                                     <div id="another-links{{ $key }}" class="form-group row-index">
-                                        <label class="control-label col-lg-2 row-index">{{ __('Add What We Do  Links') }}</label>
+                                        <label class="control-label col-lg-2 row-index">Add What We Do  Links</label>
                                         <div class="col-lg-10">
                                             <input type="text" value="{{ $link['name_en'] }}" class="form-control row-index" name="we_do[{{ $key }}][name_en]" placeholder="Name (en)"/>
                                             <input type="text" value="{{ $link['name_ar'] }}" class="form-control row-index" name="we_do[{{ $key }}][name_ar]" placeholder="Name (ar)"/>
@@ -154,7 +154,7 @@
                             @endforeach
                            
                             <div class="text-left">
-                                <button class="btn btn-primary" type="button" id="addWhatWelinks">+{{ __('Add What We Do Links') }}</button>
+                                <button class="btn btn-primary" type="button" id="addWhatWelinks">+ Add What We Do Links </button>
                             </div>
                         </div>
                     </div>

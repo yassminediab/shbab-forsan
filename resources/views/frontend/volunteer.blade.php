@@ -59,43 +59,43 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="name" placeholder="Full Name" class="form-control"
+                                        <input type="text" name="name" placeholder="{{ __('Full Name') }}" class="form-control"
                                             required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Email" class="form-control"
+                                        <input type="email" name="email" placeholder="{{ __('Email') }}" class="form-control"
                                             required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="phone" placeholder="Phone" class="form-control"
+                                        <input type="text" name="phone" placeholder="{{ __('Phone') }}" class="form-control"
                                             required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="address" placeholder="Address" class="form-control"
+                                        <input type="text" name="address" placeholder="{{ __('Address') }}" class="form-control"
                                             required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <textarea name="message" id="msg" cols="1" rows="4" placeholder="Send Message"
+                                        <textarea name="message" id="msg" cols="1" rows="4" placeholder="{{ __('Send Message') }}"
                                             spellcheck="false"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="file" name="file" placeholder="Image" class="form-control" required
+                                        <input type="file" name="file" placeholder="{{ __('') }}" class="form-control" required
                                             aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="submit" value="Submit Request" class="submit-btn">
+                                        <input type="submit" value="{{ __('Submit Request') }}" class="submit-btn">
                                     </div>
                                 </div>
                             </div>

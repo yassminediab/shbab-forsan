@@ -16,7 +16,7 @@
                 <div class="col-lg-6 col-xl-4 col-md-6">
                     <div class="contribute-single-item">
                         <div class="thumb">
-                            <img src="{{ asset($case->image) }}" alt="">
+                            <img src="{{ asset('images/'.resizeImage($case->image, 555, 410)) }}" alt="">
                         </div>
                         <div class="content">
                             <div class="progress-content">
@@ -34,8 +34,8 @@
                                 @if(app()->getLocale() == "en") {{ $case->title_en }} @else {{ $case->title_ar }} @endif
                             </h3>
                             <p>
-                                @if(app()->getLocale() == "en") {{ \Str::limit(Strip_tags($case->content_en), $limit = 80, $end = '...')  }}
-                                   @else {{ \Str::limit(Strip_tags($case->content_ar), $limit = 80, $end = '...')  }}
+                                @if(app()->getLocale() == "en") {!! \Str::limit(Strip_tags($case->content_en), $limit = 600, $end = '...')  !!}
+                                   @else {!! \Str::limit(Strip_tags($case->content_ar), $limit = 600, $end = '...')  !!}
                                 @endif 
                             </p>
                             <div class="btn-wrapper">

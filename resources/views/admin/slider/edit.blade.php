@@ -6,7 +6,7 @@
     <!-- Form horizontal -->
     <div class="panel panel-flat">
         <div class="panel-heading">
-            <h5 class="panel-title">blog</h5>
+            <h5 class="panel-title">slider</h5>
             <div class="heading-elements">
                 <ul class="icons-list">
                     <li><a data-action="collapse"></a></li>
@@ -76,7 +76,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2">image</label>
                             <div class="col-lg-10">
-                                <img src="{{ asset('images/'. $slider->image) }}" width="100px" />
+                                <img src="{{ asset('images/'.resizeImage($slider->image, 50, 50))}}" width="100px" />
                                 <input type="file" class="form-control file-styled" name="file" >
                             </div>
                         </div>

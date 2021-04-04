@@ -42,7 +42,7 @@ class TestimonialController extends Controller
         return view('admin.testimonials.create');
     }
 
-    public function store(BlogsRequest $request)
+    public function store(Request $request)
     {
         $request->content_ar = editorContent($request->content_ar);
 

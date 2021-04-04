@@ -12,8 +12,8 @@
                     </div>
                     <div class="section-paragraph">
                         <P>
-                            @if(app()->getLocale() == "en") {{ \Str::limit(Strip_tags($eventSection->content_en), $limit = 80, $end = '...')  }}
-                              @else {{ \Str::limit(Strip_tags($eventSection->content_ar), $limit = 80, $end = '...')  }}
+                            @if(app()->getLocale() == "en") {!! \Str::limit(Strip_tags($eventSection->content_en), $limit = 300, $end = '...')  !!}
+                              @else {!! \Str::limit(Strip_tags($eventSection->content_ar), $limit = 300, $end = '...')  !!}
                             @endif 
                         </P>
                     </div>
@@ -25,7 +25,7 @@
             <div class="col-lg-6">
                 <div class="events-single-item bg-image margin-bottom-30" style="background-image: url(assets/img/events/bg.png);">
                     <div class="thumb">
-                        <div class="bg-image" style="background-image: url(assets/img/events/01.jpg)">
+                        <div class="bg-image" style="background-image: url({{ asset('images/'.resizeImage($event->image, 255, 285)) }})">
                             <div class="post-time">
                                 <h5 class="title">{{ $event->date->format('d') }}</h5>
                                 <span>{{ $event->date->format('M') }}</span>

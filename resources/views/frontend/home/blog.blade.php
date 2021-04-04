@@ -31,6 +31,11 @@
                             <h4 class="title"><a href="{{ url('blogs/'. $blog->id) }}">
                                 @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif
                             </a></h4>
+                            <p>
+                               @if(app()->getLocale() == "en") {!! \Str::limit(Strip_tags($blog->content_en), $limit = 600, $end = '...')  !!}
+                                   @else {!! \Str::limit(Strip_tags($blog->content_ar), $limit = 600, $end = '...')  !!}
+                                @endif 
+                            </p>
                         </div>
                     </div>
                 </div>

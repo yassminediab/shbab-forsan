@@ -79,7 +79,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2">image</label>
                             <div class="col-lg-10">
-                                <img src="{{ asset('images/'. $volunteerSection->image) }}" width="100px" />
+                                <img src="{{ asset('images/'.resizeImage($volunteerSection->image, 50, 50))}}" width="100px" />
                                 <input type="file" class="form-control file-styled" name="file" >
                             </div>
                         </div>
