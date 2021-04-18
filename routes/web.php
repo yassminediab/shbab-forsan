@@ -36,6 +36,8 @@ Route::resource('contact', 'ContactController');
 //volunteer
 Route::resource('volunteer', 'VolunteerController');
 
+Route::resource('volunteer-data', 'VolunteerDataController');
+
 //about us
 Route::resource('about-us', 'AboutUsController');
 //ADMIN
@@ -130,6 +132,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('volunteers/store', 'Admin\VolunteerController@store');
     Route::post('volunteers/update', 'Admin\VolunteerController@update');
 
+    //volunteers data
+    Route::get('volunteers-data', 'Admin\VolunteerDataController@index')->name('volunteer-admin-data.index');
+    Route::get('volunteers-data/delete/{id}', 'Admin\VolunteerDataController@delete');
 
     //volunteers
     Route::get('slider', 'Admin\SliderController@index')->name('slider.index');
