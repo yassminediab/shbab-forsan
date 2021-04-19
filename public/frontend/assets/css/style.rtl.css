@@ -118,3 +118,7 @@
 .navbar-area.nav-style-02 .nav-container .logo-wrapper .logo {
     margin-right: auto;
 }
+
+.header-area .header-inner {
+    text-align: right;
+}
