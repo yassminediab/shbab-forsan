@@ -2196,7 +2196,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .about_us_widget .footer-logo {
   margin-bottom: 20px;
-  display: block;
+  display: flex;
+  height: 100px;
 }
 
 .copyright-area {
@@ -2415,10 +2416,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   position: absolute;
   top: -35px;
   box-shadow: 0px 0px 62px 0px rgba(0, 0, 0, 0.2);
-  padding: 30px 70px 30px 30px;
+  padding: 10px 70px 10px 30px;
   border-left: 5px solid var(--main-color-one);
   -webkit-clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+}
+.navbar-area.nav-style-02 .nav-container .logo-wrapper .logo {
+    display: flex;
+    height: 80px;
+    width: 80px;
 }
 .navbar-area.nav-style-02 .nav-container .nav-right-content {
   display: flex;
