@@ -223,7 +223,7 @@
                         <div class="topbar-inner">
                             <div class="left-contnet">
                                 <ul class="info-items">
-                                    <li><a href="#"><i class="flaticon-call"></i>{{ $footer->phone }}</a></li>
+                                    <li><a href="#"><i class="flaticon-call"></i>{{ $footer->phone[0] }}</a></li>
                                     <li><a href="mailto:{{ $footer->email }}"><i class="far fa-envelope-open"></i>{{
                                             $footer->email }}</a></li>
                                 </ul>

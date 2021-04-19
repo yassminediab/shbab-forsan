@@ -52,11 +52,17 @@ class ProblemController extends Controller
 
         $request->content_en = editorContent($request->content_en);
 
+        $request->long_content_ar = editorContent($request->long_content_ar);
+
+        $request->long_content_en = editorContent($request->long_content_en);
+
         Model::create([
             'title_ar' => $request->title_ar,
             'title_en' => $request->title_en,
             'content_en' => $request->content_en,
             'content_ar' => $request->content_ar,
+            'long_content_en' => $request->long_content_en,
+            'long_content_ar' => $request->long_content_ar,
             'icon' => $imageName,
             'url' => $request->url
         ]);
@@ -76,17 +82,34 @@ class ProblemController extends Controller
     public function update(Request $request)
     {
         $data = [];
-        $data = $request->except('_token', 'file', 'files');
+        $data = $request->except('_token', 'file', 'files','photoName');
         if ($request->file) {
             $imageName = time().'.'.request()->file->getClientOriginalExtension();
             request()->file->move(public_path('images'), $imageName);
             $data['icon'] = $imageName;
         }
 
-        $data['content_ar'] = editorContent($request->content_ar);
+        $maxIndex = max(array_key_last(($request->photo) ? $request->photo : []) , array_key_last(($request->photoName) ? $request->photoName : []));
 
-        $data['content_en'] = editorContent($request->content_en);
+        $photo_names = [];
+        for($i = 0; $i <= $maxIndex; $i++ ) {
+            if (isset($request->photo[$i]) && $request->photo[$i]) {
+                $imageName = time().'.'.$request->photo[$i]->getClientOriginalExtension();
+                $request->photo[$i]->move(public_path('images'), $imageName);
+                $photo_names[] = $imageName;
 
+            }
+            elseif(isset($request->photoName[$i])) {
+                $imageName = $request->photoName[$i];
+                $photo_names[] = $imageName;
+            }
+        }
+
+        $data['long_content_ar'] = editorContent($request->long_content_ar);
+
+        $data['long_content_en'] = editorContent($request->long_content_en);
+
+        $data['photo'] = $photo_names;
 
         Model::where('id', $request->id)->update($data);
 

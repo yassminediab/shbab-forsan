@@ -7,7 +7,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-counterup-01">
                         <div class="icon">
-                           @if($val == 0) <i class="fas fa-hand-holding-heart"></i> @elseif($val == 1) <i class="flaticon-solidarity"></i>
+                           @if($val == 0) <i class="fas fa-hand-holding-heart">
+                           </i> @elseif($val == 1) <i class="flaticon-solidarity" style="font-size: 90px;"></i>
+
                            @else <i class="flaticon-man"></i> @endif
                         </div>
                         <div class="content">

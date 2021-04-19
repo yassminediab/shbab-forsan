@@ -93,10 +93,18 @@
                     </div>
                     <div class="tab-pane" id="data-tab">
                         <div class="form-group">
-                            <label class="control-label col-lg-2">logo </label>
+                            <label class="control-label col-lg-2">logo In Header</label>
                             <div class="col-lg-10">
                                 <img src="{{ asset('images/'.resizeImage($footer->logo, 989, 989))}}" width="100px" />
                                 <input type="file" class="form-control file-styled" name="file">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-lg-2">logo In Footer</label>
+                            <div class="col-lg-10">
+                                <img src="{{ asset('images/'.resizeImage($footer->logo_footer, 989, 989))}}" width="100px" />
+                                <input type="file" class="form-control file-styled" name="file2">
                             </div>
                         </div>
 
@@ -108,11 +116,23 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="control-label col-lg-2">Phone</label>
-                            <div class="col-lg-10">
-                                <input type="text" class="form-control" name="phone" placeholder="enter phone"
-                                 required value="{{ $footer->phone }}">
+
+                         <div id="other-persons" class="form-group">
+                            <div id="main-phones" >   
+                                @foreach ($footer->phone as $key => $phone)
+                                    
+                                    <div id="another-phone{{ $key }}" class="form-group row-index">
+                                        <label class="control-label col-lg-2 row-index"> Add More Phone Number </label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control row-index" value="{{ $phone }}" name="phone[{{ $key }}]" placeholder="Phone"/>
+                                            <a data-remove="{{ $key }}" class="btn btn-danger remove btn-icon"><i class="icon-trash"></i></a>
+                                        </div>    
+                                    </div>
+                                @endforeach
+                            </div>
+                            
+                            <div class="text-left">
+                                <button class="btn btn-primary" type="button" id="addMainPhones">+ Add Main Phones </button>
                             </div>
                         </div>
 
@@ -168,6 +188,28 @@
     <!-- /form horizontal -->
 <script>
 
+var rowIdx3 = {{ count($footer->phone) }}; 
+
+$('#addMainPhones').on('click', function () { 
+	$('#main-phones').append(
+        `<div id="another-phone${rowIdx3}" class="form-group row-index">
+            <label class="control-label col-lg-2 row-index">{{ __('Add Main Phones') }}</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control row-index" name="phone[${rowIdx3}]" placeholder="Phone"/>			                               
+                <a data-remove="${rowIdx3}" class="btn btn-danger remove btn-icon"><i class="icon-trash"></i></a>
+            </div>    
+        </div>`
+    ); 
+
+    rowIdx3++;
+}); 
+$('#main-phones').on('click', '.remove', function () { 
+    var child = $(this).closest('div').nextAll(); 
+    var dataRemove = $(this).attr('data-remove');
+    $(`#another-phone${dataRemove}`).remove();
+
+}); 
+
 var rowIdx = {{ count($footer->main_links) }}; 
 
 $('#addMainLinks').on('click', function () { 
@@ -192,6 +234,7 @@ $('#main-links').on('click', '.remove', function () {
 
 }); 
 
+
 var rowIdx2 = {{ count($footer->we_do) }};;
 $('#addWhatWelinks').on('click', function () { 
 	$('#what-we-d0-links').append(
@@ -205,7 +248,7 @@ $('#addWhatWelinks').on('click', function () {
             </div>    
         </div>`
     ); 
-    rowIdx++;
+    rowIdx2++;
 }); 
 $('#what-we-d0-links').on('click', '.remove', function () { 
     var child = $(this).closest('div').nextAll(); 

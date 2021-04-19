@@ -69,11 +69,17 @@ class FooterController extends Controller
     public function update(Request $request)
     {
         $data = [];
-        $data = $request->except('_token', 'file', 'files');
+        $data = $request->except('_token', 'file', 'files','file2');
         if ($request->file) {
             $imageName = time().'.'.request()->file->getClientOriginalExtension();
             request()->file->move(public_path('images'), $imageName);
             $data['logo'] = $imageName;
+        }
+
+        if ($request->file2) {
+            $imageName = time().'.'.request()->file2->getClientOriginalExtension();
+            request()->file2->move(public_path('images'), $imageName);
+            $data['logo_footer'] = $imageName;
         }
 
         $data['content_ar'] = editorContent($request->content_ar);

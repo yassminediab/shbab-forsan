@@ -19,7 +19,7 @@
                         <!-- slider item -->
                          @foreach($testimonials as $testimonial)
 						<div class="feedback-slider-item">
-							<h1 class="customer-name" style="font-size: 25px;">
+							<h1 class="customer-name" style="font-size: 28px;">
                                  @if(app()->getLocale() == "en") {{ $testimonial->title_en }} @else {{
                                         $testimonial->title_ar }} @endif</h1>
 							<p>  @if(app()->getLocale() == "en") {!! Strip_tags($testimonial->content_en) !!}

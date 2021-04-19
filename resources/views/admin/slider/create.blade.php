@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Button Title (Ar)</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" name="button_title_ar" placeholder="enter title" required value="{{ old('button_title_ar') }}">
+                                        <input type="text" class="form-control" name="button_title_ar" placeholder="enter button title" required value="{{ old('button_title_ar') }}">
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Button Title (En)</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" name="button_title_en" placeholder="enter title" required value="{{ old('button_title_en') }}">
+                                        <input type="text" class="form-control" name="button_title_en" placeholder="enter button title" required value="{{ old('button_title_en') }}">
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2">Button Url</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" name="button_url" placeholder="enter title" required value="{{ old('button_url') }}">
+                                <input type="text" class="form-control" name="button_url" placeholder="enter url" required value="{{ old('button_url') }}">
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget">
                             <div class="about_us_widget">
-                                <a href="" class="footer-logo"> <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt="footer logo"></a>
+                                <a href="" class="footer-logo"> <img src="{{ asset('images/'.resizeImage($footer->logo_footer, 40, 40)) }}" alt="footer logo"></a>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                                         <i class="flaticon-call"></i>
                                     </div>
                                     <div class="details">
-                                        {{ $footer->phone }}
+                                        {{ $footer->phone[0] }}
                                     </div>
                                 </li>
                             </ul>
@@ -90,7 +90,10 @@
                                 {{ __('Contact') }}
                             </div>
                             <div class="details">
-                                {{ $footer->phone }} <br> {{ $footer->email }}
+                            @foreach($footer->phone as $phone)
+                                {{ $phone }} <br> 
+                            @endforeach
+                                {{ $footer->email }}
                             </div>
                         </li>
                     </ul>

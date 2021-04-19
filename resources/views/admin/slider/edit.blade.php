@@ -49,6 +49,12 @@
                                         </textarea>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="control-label col-lg-2">Button Title (Ar)</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" name="button_title_ar" placeholder="enter title" required value="{{ $slider->button_title_ar }}">
+                                    </div>
+                                </div>
 
                             </div>
 
@@ -65,6 +71,12 @@
                                         <textarea type="text" rows="5" cols="5" class="form-control summernote" required name="content_en" placeholder="enter description">
                                             {{ $slider->content_en }}
                                         </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-lg-2">Button Title (En)</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" name="button_title_en" placeholder="enter title" required value="{{ $slider->button_title_en }}">
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +96,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2">Button Url</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" name="button_url" placeholder="enter title" required  value="{{ $slider->button_url }}">
+                                <input type="text" class="form-control" name="button_url" placeholder="enter url" required  value="{{ $slider->button_url }}">
                             </div>
                         </div>
                     </div>

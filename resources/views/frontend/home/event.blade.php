@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 <div class="attend-title-content margin-bottom-50">
                     <div class="section-title desktop-left">
-                        <h3 class="title">
+                        <h3 class="title" style="text-align: center;">
                             @if(app()->getLocale() == "en") {{ $eventSection->title_en }} @else {{ $eventSection->title_ar }} @endif
                         </h3>
                     </div>

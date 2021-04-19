@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddEventSectionsTable extends Migration
+class AddFieldsToProblems extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AddEventSectionsTable extends Migration
      */
     public function up()
     {
-        Schema::table('event_sections', function (Blueprint $table) {
-            $table->text('content_en')->change();
-            $table->text('content_ar')->change();
+        Schema::table('problems', function (Blueprint $table) {
+            $table->text('photo');
+            $table->text('long_content_ar');
+            $table->text('long_content_en');
+
         });
     }
 
@@ -26,7 +28,7 @@ class AddEventSectionsTable extends Migration
      */
     public function down()
     {
-        Schema::table('event_sections', function (Blueprint $table) {
+        Schema::table('problems', function (Blueprint $table) {
             //
         });
     }
