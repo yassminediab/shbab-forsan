@@ -272,3 +272,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         return view('admin.index');
     });
 });
+
+
+
+Route::view('/new-page', 'frontend.new-page');
