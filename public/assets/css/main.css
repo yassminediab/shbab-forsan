@@ -210,6 +210,12 @@ header .doctor .container #mouse-scroll .mouse-in {
     right: -11px;
   }
 }
+.navbar-area.nav-style-02 .nav-container .logo-wrapper .logo {
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
 footer {
   position: relative;
   z-index: 8;

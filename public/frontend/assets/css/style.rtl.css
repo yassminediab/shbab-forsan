@@ -114,3 +114,7 @@
 .request-page-form .form-group .form-control{
     text-align: right;
 }
+
+.navbar-area.nav-style-02 .nav-container .logo-wrapper .logo {
+    margin-right: auto;
+}

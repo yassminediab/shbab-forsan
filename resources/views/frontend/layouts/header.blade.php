@@ -255,7 +255,8 @@
                 <div class="responsive-mobile-menu">
                     <div class="logo-wrapper">
                         <a href="{{ url('/') }}" class="logo">
-                            <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt="">
+                            <!-- <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt=""> -->
+                            <img src="{{ asset('images/logo.png') }}" alt="shabab forsan.">
                         </a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
