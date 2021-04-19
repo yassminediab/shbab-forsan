@@ -2196,7 +2196,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .about_us_widget .footer-logo {
   margin-bottom: 20px;
-  display: block;
+  display: flex;
+  height: 100px;
 }
 
 .copyright-area {

@@ -7,7 +7,10 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget">
                             <div class="about_us_widget">
-                                <a href="" class="footer-logo"> <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt="footer logo"></a>
+                                <a href="" class="footer-logo">
+                                    <!-- <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt="footer logo"> -->
+                                    <img src="{{ asset('images/logo-bg-white.png') }}" alt="shabab forsan.">
+                                </a>
                             </div>
                         </div>
                     </div>
