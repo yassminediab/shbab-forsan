@@ -1,25 +1,35 @@
 @extends('frontend.layouts.header')
 @section('content')
-<!-- breadcrumb Area -->
-<div class="breadcrumb-area"
-    style="background-image:url('https://picsum.photos/200');">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb-inner">
-                    {{-- <div class="icon">
-                        <img src="assets/img/icon/01.png" alt="">
-                    </div> --}}
-                    <h1 class="page-title">new page</h1>
-                    <ul class="page-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">new page</a></li>
-                    </ul>
+
+<!-- Slider -->
+<div class="header-slider-one">
+    @for($i = 0; $i < 3; $i++)
+    <div class="header-area header-bg"
+        style="background-image:url('https://picsum.photos/800'); background-repeat: no-repeat; background-position:
+        center center; background-size: cover;">
+        <div class="container">
+            <div @if(app()->getLocale() == "en") class="row" @else class="row justify-content-end" @endif>
+                <div @if(app()->getLocale() == "en") class="col-lg-6" @else class="col-lg-6 col-lg-offset-8" @endif>
+                    <div class="header-inner">
+                        <!-- header inner -->
+                        <h1 class="title">
+                            New Page
+                        </h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam saepe temporibus suscipit voluptate laudantium ullam mollitia officiis autem veniam modi exercitationem ducimus, aliquid deserunt, eos impedit quod. Sunt, nostrum at!</p>
+                        <div class="btn-wrapper  desktop-left padding-top-30">
+                            <a href="#" class="boxed-btn float-start">
+                                learn more
+                            </a>
+                        </div>
+                    </div>
+                    <!-- //.header inner -->
                 </div>
             </div>
         </div>
     </div>
+    @endfor
 </div>
+
 <!--Events Details Area -->
 <div class="page-content our-attoryney padding-bottom-120 padding-top-120">
     <div class="container">
