@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright-area-inner">
-                        &copy; {{ __('Copyrights 2020 Shabab-Forsan . Designed By Love . All rights reserved') }}
+                        &copy; {{ __('Copyrights 2020 Shabab-Forsan . All rights reserved') }}
                     </div>
                 </div>
             </div>
