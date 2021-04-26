@@ -258,7 +258,6 @@
                             <!-- <img src="{{ asset('images/'.resizeImage($footer->logo, 40, 40)) }}" alt=""> -->
                             <img src="{{ asset('images/logo.png') }}" alt="shabab forsan.">
                         </a>
-                        <p>shbab forsan</p>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
                         aria-expanded="false" aria-label="Toggle navigation">
