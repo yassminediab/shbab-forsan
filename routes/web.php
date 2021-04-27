@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('copy', 'CopyDbController@index');
 Auth::routes();
-Route::post('newsletter', function(){
-return 12;
-});
 Route::get('/', 'HomeController@index');
 // Route::get('locale/{locale}', 'Partials\LanguagesController@index')->name('locale');
 Route::get('modelblog/{id}', 'HomeController@getblogModel');
@@ -30,6 +27,8 @@ Route::resource('blogs', 'BlogController');
 //event
 Route::resource('events', 'EventController');
 
+Route::resource('problems', 'ProblemController');
+
 //contact
 Route::resource('contact', 'ContactController');
 
@@ -37,6 +36,7 @@ Route::resource('contact', 'ContactController');
 Route::resource('volunteer', 'VolunteerController');
 
 Route::resource('volunteer-data', 'VolunteerDataController');
+Route::resource('newsletter', 'NewsLetterController');
 
 //about us
 Route::resource('about-us', 'AboutUsController');
@@ -271,6 +271,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('admin.index');
     });
+
+    //newsletters
+    Route::get('newsletters', 'Admin\NewsLetterController@index')->name('newsletters.index');
+    Route::get('newsletters/edit/{id}', 'Admin\NewsLetterController@edit');
+    Route::get('newsletters/show/{id}', 'Admin\NewsLetterController@show');
+    Route::get('newsletters/delete/{id}', 'Admin\NewsLetterController@delete');
+    Route::get('newsletters/create', 'Admin\NewsLetterController@create');
+    Route::post('newsletters/store', 'Admin\NewsLetterController@store');
+    Route::post('newsletters/update', 'Admin\NewsLetterController@update');
 });
 
 

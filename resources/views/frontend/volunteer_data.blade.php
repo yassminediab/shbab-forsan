@@ -21,6 +21,8 @@
         </div>
     </div>
 </div>
+
+
 <!--Events Details Area -->
 <div class="page-content our-attoryney padding-bottom-120 padding-top-120">
     <div class="container">
@@ -28,22 +30,26 @@
             <div class="col-lg-8">
                 <div class="volunteer-details-item">
                     <div class="section-title margin-bottom-35">
-                        <h2 class="title">
 
-                        </h2>
-                        <p>
-                        </p>
+                        <ul class="list-unstyled text-body lead" style="color: #000;">
+                            <li class="mb-2">
+                                📌بنك Cib - جمعية شباب فرسان للأنشطة الخيرية 1000/4431/7391
+                            </li>
+                            <li class="mb-2">
+                                📌بنك مصر فرع سراي القبة - جمعية شباب فرسان 183/1/25349
+                            </li>
+                            <li class="mb-2">
+                                📌رسائل #ميجا_خير كلمة "فرسان" في SMS على9797 بسعر ٥ جنيه
+                            </li>
+                            <li class="mb-2">
+                                📌ماكينات #فورى : مؤسسة شباب فرسان كود 9140
+                            </li>
+                            <li class="mb-2">
+                                📌ليصلك مندوبنا يمكنك التواصل علي أرقامنا :
+                                <a href="tel:0226849010">0226849010</a> / <a href="tel:01015172946">01015172946</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- {{-- <div class="content">
-                            <p>We are a non-profit organisation in USA that works towards supporting underprivileged children reach their full potential - physical, mental as well as emotional. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip.</p>
-                            <h4 class="sub-title"><a href="#">Requirment to Join</a></h4>
-                            <ul>
-                                <li><a href="#"><i class="fas fa-check"></i>If you want to change the world</a></li>
-                                <li><a href="#"><i class="fas fa-check"></i>Keep the same cleaner for every visit</a></li>
-                                <li><a href="#"><i class="fas fa-check"></i>One-off, weekly or fortnightly visits</a></li>
-                            </ul>
-                        </div> --}}-->
                 </div>
             </div>
             <div class="col-lg-4">
@@ -51,31 +57,31 @@
                     <div class="widget-nav-form">
                         @include('frontend.layouts.success_message')
                         <form action="{{ route('volunteer-data.store') }}" class="request-page-form" novalidate="novalidate"
-                            method="post" enctype="multipart/form-data">
+                              method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="name" placeholder="{{ __('Full Name') }}" class="form-control"
-                                            required="" aria-required="true">
+                                               required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="email" name="email" placeholder="{{ __('Email') }}" class="form-control"
-                                            required="" aria-required="true">
+                                               required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="phone" placeholder="{{ __('Phone') }}" class="form-control"
-                                            required="" aria-required="true">
+                                               required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="address" placeholder="{{ __('Address') }}" class="form-control"
-                                            required="" aria-required="true">
+                                               required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">

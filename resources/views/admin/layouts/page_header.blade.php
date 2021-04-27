@@ -23,7 +23,7 @@
         <div class="panel-heading" style="overflow: hidden;">
             <h5 class="panel-title pull-left">View {{ $pageTitle }}</h5>
           @if($modelName != 'contact' && $modelName != 'volunteers'&& $modelName != 'video' && $modelName != 'aboutUs'
-          && $modelName != 'volunteer/section' && $modelName != 'testimonial/section' && $modelName!='pageSettings' && $modelName != 'event/section' && $modelName != 'blog/section' &&  $modelName != 'case/section' &&  $modelName != 'problem/section' && $modelName != 'footer' && $modelName != 'About' && $modelName != 'socialMedia' )
+          && $modelName != 'newsletter' && $modelName != 'volunteer/section' && $modelName != 'testimonial/section' && $modelName!='pageSettings' && $modelName != 'event/section' && $modelName != 'blog/section' &&  $modelName != 'case/section' &&  $modelName != 'problem/section' && $modelName != 'footer' && $modelName != 'About' && $modelName != 'socialMedia' )
             <a href="{{ url('admin/'.$modelName.'/create') }}"  class="pull-right btn btn-primary"> Add {{ $modelName }}</a>
           @endif
         </div>

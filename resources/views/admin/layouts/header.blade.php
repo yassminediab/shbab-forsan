@@ -197,6 +197,7 @@
                                     <li><a href="{{ url('admin/contact') }}">view Contacts</a></li>
                                     <li><a href="{{ url('admin/volunteers') }}">view Volunteers</a></li>
                                     <li><a href="{{ url('admin/volunteers-data') }}">view Volunteers Data</a></li>
+                                    <li><a href="{{ url('admin/newsletters') }}">view NewsLetter</a></li>
                                 </ul>
                             </li>
 

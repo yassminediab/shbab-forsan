@@ -21,7 +21,7 @@
                        </div>
                        <div class="content">
                            <h2 class="title" style="margin-top: 20px;font-size: 27px;">
-                               <a href="{{ $problem->url }}">
+                               <a href="{{ url('problems/'. $problem->id) }}">
                                    @if(app()->getLocale() == "en") {{ $problem->title_en }} @else {{ $problem->title_ar
                                    }} @endif
                                </a>
