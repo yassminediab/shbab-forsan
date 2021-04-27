@@ -1,0 +1,28 @@
+{
+"Read More" : "اقرء المزيد",
+"Goal" : "Goal",
+"Raised" : "Raised",
+"More Causes": "More Causes",
+"Donate For This Cause" : "Donate For This Cause",
+"Categories" : "Categories",
+"Recent Post" : "Recent Post",
+"Tags" : "Tags",
+"Submit Message" : "Submit Message",
+"Add Main Links" : "Add Main Links",
+"Subscribe Newsletter" : "Subscribe Newsletter",
+"What we do" : "What we do",
+"Our Address" : "Our Address",
+"Copyrights 2020 Shabab-Forsan . Designed By Love . All rights reserved" : "Copyrights 2020 Shabab-Forsan . Designed By
+Love . All rights reserved",
+"Pages" : "Pages",
+"Our Volunteer" : "Our Volunteer",
+"About" : "About",
+"Events" ; "Events",
+"Home" : "Home",
+"Contact" : "Contact",
+"blogs" : "blogs",
+"Want to work with us ?" : "Want to work with us ?",
+"Become a Volunteer" : "Become a Volunteer",
+"Shabab Forsan" : "Shabab Forsan",
+"About Us" : "About Us"
+}

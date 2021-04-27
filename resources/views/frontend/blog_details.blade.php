@@ -38,7 +38,7 @@
                                     <li><a href="#">By <span>Admin</span></a></li>
                                     <li><a href="#">Comments<span>(03)</span></a></li>
                                 </ul> --}}
-                                <h4 class="title"><a href="#">
+                                <h4 class="title" style="margin-top: 25px;padding-right: 6px;"><a href="#">
                                     @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif
                                 </a></h4>
                             </div>
