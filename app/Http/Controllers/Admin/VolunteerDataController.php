@@ -12,7 +12,7 @@ class VolunteerDataController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Model::select('*');
+            $data = Model::latest()->select('*');
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {

@@ -17,7 +17,7 @@ class BlogController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Blog::select('*');
+            $data = Blog::latest()->select('*');
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {
@@ -26,7 +26,7 @@ class BlogController extends Controller
                                 <li><a class="btn btn-primary btn-icon" href="' . url('admin/blogs/edit/' . $row->id) . '"><i class="icon-pencil7"></i></a></li>
                                 <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->title_en .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/blogs/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
-    
+
                         return $btn;
                     })
                     ->rawColumns(['action'])
@@ -77,7 +77,7 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $blog->image = resizeImage($blog->image, 50, 20);
-          
+
         return view('admin.blogs.edit', [
             'blog' => $blog,
             'categories' => Category::all(),
@@ -99,7 +99,7 @@ class BlogController extends Controller
 
         $data['content_en'] = editorContent($request->content_en);
 
-        
+
         Blog::where('id', $request->id)->update($data);
         return redirect('/admin/blogs')->with('success', 'updated Successfully!');
     }

@@ -12,7 +12,7 @@ class VideoController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Model::select('*');
+            $data = Model::latest()->select('*');
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {
@@ -21,7 +21,7 @@ class VideoController extends Controller
                                 <li><a class="btn btn-primary btn-icon" href="' . url('admin/video/edit/' . $row->id) . '"><i class="icon-pencil7"></i></a></li>
                                 <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->title_en .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/video/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
-    
+
                         return $btn;
                     })
                     ->rawColumns(['action'])

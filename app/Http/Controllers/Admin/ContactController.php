@@ -12,7 +12,7 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Model::select('*');
+            $data = Model::latest()->select('*');
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {
@@ -20,7 +20,7 @@ class ContactController extends Controller
                            <ul class="list-inline">
                                 <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->title_en .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/contact/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
-    
+
                         return $btn;
                     })
                     ->rawColumns(['action'])

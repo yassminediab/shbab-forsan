@@ -13,7 +13,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Model::select('*');
+            $data = Model::latest()->select('*');
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {
@@ -22,7 +22,7 @@ class CategoryController extends Controller
                                 <li><a class="btn btn-primary btn-icon" href="' . url('admin/categories/edit/' . $row->id) . '"><i class="icon-pencil7"></i></a></li>
                                 <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->title_en .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/categories/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
-    
+
                         return $btn;
                     })
                     ->rawColumns(['action'])
@@ -48,7 +48,7 @@ class CategoryController extends Controller
     public function store(CategoryRequest $request)
     {
         Model::create($request->all());
-        
+
         return redirect('/admin/categories')->with('success', 'created Successfully!');
     }
 

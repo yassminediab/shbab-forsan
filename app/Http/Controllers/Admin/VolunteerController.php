@@ -12,7 +12,7 @@ class VolunteerController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Model::select('*');
+            $data = Model::latest()->select('*');
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {
@@ -20,7 +20,7 @@ class VolunteerController extends Controller
                            <ul class="list-inline">
                                 <li><a onclick = "if (!confirm(\'Are You sure to remove '. $row->name .'?\')) { return false; }" class="btn btn-danger btn-icon" href="' . url('admin/volunteers/delete/' . $row->id) . '"><i class="icon-trash"></i></a></li>
                             </ul>';
-    
+
                         return $btn;
                     })
                     ->rawColumns(['action'])
@@ -46,7 +46,7 @@ class VolunteerController extends Controller
     public function store(Request $request)
     {
         Model::create($request->all());
-        
+
         return redirect('/admin/volunteers')->with('success', 'created Successfully!');
     }
 

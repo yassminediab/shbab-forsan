@@ -5,7 +5,7 @@ if (!function_exists('editorContent')) {
     function editorContent($content)
     {
         $dom = new \DomDocument();
-        $dom->loadHtml(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        @$dom->loadHtml(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         $images = $dom->getElementsByTagName('img');
         foreach ($images as $img) {
             $src = $img->getAttribute('src');

@@ -23,38 +23,44 @@
     <div class="page-content our-attoryney padding-top-120 padding-bottom-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    @foreach($blogs as $blog)
-                        <div class="blog-classic-item-01 margin-bottom-60">
-                            <div class="thumbnail">
-                                <img src="{{ asset('images/'.resizeImage($blog->image, 360, 332))}}" alt="   @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif">
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="news-date">
-                                    <h5 class="title"> @if($blog->created_at) {{ $blog->created_at->format('d')}} @endif</h5>
-                                    <span> @if($blog->created_at) {{ $blog->created_at->format('F') }} @endif</span>
+                <div class="col-lg-9">
+                    <div class="row">
+                        @foreach($blogs as $blog)
+                            <div class="col-lg-6">
+                                <div class="blog-classic-item-01 margin-bottom-60">
+                                    <div class="thumbnail">
+                                        <img src="{{ asset('images/'.resizeImage($blog->image, 360, 332))}}" alt="   @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif">
+                                    </div>
+                                    <div class="content-wrapper">
+                                        <div class="news-date">
+                                            <h5 class="title"> @if($blog->created_at) {{ $blog->created_at->format('d')}} @endif</h5>
+                                            <span> @if($blog->created_at) {{ $blog->created_at->format('F') }} @endif</span>
+                                        </div>
+                                        <div class="content">
+                                            {{-- <ul class="post-meta">
+                                                <li><a href="#">By <span>Admin</span></a></li>
+                                                <li><a href="#">Comments<span>(03)</span></a></li>
+                                            </ul> --}}
+                                            <h4 class="title"><a href="#">
+                                                @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif
+                                            </a></h4>
+                                        </div>
+                                    </div>
+                                    <div class="blog-bottom">
+                                        <p>
+                                            @if(app()->getLocale() == "en") {!! \Str::limit(Strip_tags($blog->content_en), $limit =
+                                            50, $end = '...') !!}
+                                            @else {!! \Str::limit(Strip_tags($blog->content_ar), $limit = 50, $end = '...') !!}
+                                            @endif
+                                        </p>
+                                        <div class="btn-wrapper">
+                                            <a href="{{ url('blogs/'. $blog->id) }}" class="boxed-btn reverse-color">{{ __('Read More') }}</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    {{-- <ul class="post-meta">
-                                        <li><a href="#">By <span>Admin</span></a></li>
-                                        <li><a href="#">Comments<span>(03)</span></a></li>
-                                    </ul> --}}
-                                    <h4 class="title"><a href="#">
-                                        @if(app()->getLocale() == "en") {{ $blog->title_en }} @else {{ $blog->title_ar }} @endif
-                                    </a></h4>
                                 </div>
-                            </div>
-                            <div class="blog-bottom">
-                                <p>
-                                    @if(app()->getLocale() == "en")   {{ \Str::limit(Strip_tags($blog->content_en), $limit = 50, $end = '...')  }}
-                                    @else  {{ \Str::limit(Strip_tags($blog->content_ar), $limit = 50, $end = '...')  }}  @endif
-                                </p>
-                                <div class="btn-wrapper">
-                                    <a href="{{ url('blogs/'. $blog->id) }}" class="boxed-btn reverse-color">{{ __('Read More') }}</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                     <div class="blog-pagination desktop-center">
                         {{ $blogs->links() }}
 
@@ -67,7 +73,7 @@
                         </ul> --}}
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="widget-area">
                         <div class="widget widget_search">
                             <form action="http://irtech.biz/tf/fundorex/blog.html" class="search-form">
